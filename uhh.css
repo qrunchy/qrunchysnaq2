@@ -1,0 +1,30 @@
+nav {
+    background-color: darkseagreen;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    border-radius: var(--bradius);
+    border-style: var(--bstyle);
+    border-color: var(--bcolor);
+    border-width: var(--bwidth);
+    padding: var(--padding);
+}
+
+.navbar {
+    position: fixed;
+    overflow: auto;
+    
+}
+
+.navbar a {
+    display: block;
+    margin: auto;
+}
+
+
+iframe {
+overflow-x:hidden;
+overflow-y:scroll;
+border-radius:10px;
+border-style:dashed;
+border-color:#5E3CCC;
+}
