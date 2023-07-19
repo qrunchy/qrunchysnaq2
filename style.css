@@ -135,14 +135,14 @@ nav {
     margin: auto;
 }
 
-#gallery {
+#recents {
     display: flex;
     flex-wrap: wrap;
     gap:10px;
     justify-content: center;
 }
 
-#gallery img {
+#recents img {
     width: 150px;
 }
 
@@ -308,12 +308,12 @@ header img {
 
 #pagecontent {
     height: 600px;
+    padding-top: 20px;
     padding-left:35px; 
     padding-right:35px; 
     flex: 1;
     overflow: auto;
 }
-
 
 #gallery {
     display: flex;
@@ -324,6 +324,24 @@ header img {
 
 #gallery img {
     width: 150px;
+}
+
+.archive {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.thumb {
+    margin:3px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.thumb img{
+  max-height:180px;
 }
 
 .subtitle1 {
@@ -420,6 +438,11 @@ header img {
 #portclear p {
     font-size: 20px;
 }
+
+#leftalign {
+    text-align:left;
+}
+
 }
 
 /*footer area*/

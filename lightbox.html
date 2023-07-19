@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Simple Lightbox - Responsive touch friendly Image lightbox</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="simple-lightbox.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            font-size: 20px;
+            line-height: 34px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .container #gallery a img {
+            float: left;
+            height: auto;
+            border: 2px solid #fff;
+            -webkit-transition: -webkit-transform .15s ease;
+            -moz-transition: -moz-transform .15s ease;
+            -o-transition: -o-transform .15s ease;
+            -ms-transition: -ms-transform .15s ease;
+            transition: transform .15s ease;
+            position: relative;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        a {
+            color: #009688;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #01695f;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 class="align-center">Simple Lightbox Demo Page</h1>
+    <section id="gallery">
+        <img v-bind:src="'art/'+image" v-for="image in images" title="" width="200px"/>
+    </section>
+    <br>
+</div>
+<script src="simple-lightbox.js"></script>
+<script>
+    (function() {
+        var $gallery = new SimpleLightbox('.gallery a', {});
+    })();
+</script>
+</body>
+<script>
+    const { createApp } = Vue
+
+    createApp({
+      data() {
+        return {
+          images: ["01_02rprskeefs.png","01_03skeefconcern.png","01_04dncskeef-color_sm.png"]
+        }
+      }
+    }).mount('#gallery')
+  </script>
+</html>
