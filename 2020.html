@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2020</title>
+<link rel="icon" type="image/x-icon" href="img/cdfavicon.ico">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="simple-lightbox.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="load.js"></script>
+<script type="text/javascript" src="cursor.js"></script> 
+  </head>
+  <body>
+    <div id="box">
+        <header></header> 
+        <nav></nav> 
+        <div id="border">
+            <img src="img/dolphin.png" id="tldecor">
+            <img src="img/dolphin.png" id="trdecor">
+          <div id="container">
+          <div id="pagecontent">
+            <div id="top"></div>
+            <p><a href="art.html">Art</a> | <a href="archive.html">Archive</a><br>
+              <div id="archnav"></div>
+              <a href="#fin">Finished work</a> | <a href="#rough">Rough work</a>
+              <h3><img src="img/2020.png" class="subtitle1"></h3>
+              I had a hard time with art in 2020, as I had a lot of mental issues dealing with work stress and the pandemic. I also cut down on screen time to balance out being stuck at home more, so I didn't get a lot of finished digital work done. I mostly sketched and doodled, some of which was done during downtime on the Surface I used at work. I had to use my phone camera for sketchbook pics, so apologies for the quality.
+More Guild Wars 2 fan art this year. Drew a bit of Pokemon stuff as my partner and I played SwSh a lot. I also got really into Sonic the Hedgehog, and experimented a bit with a Sonic inspired style. The last few drawings here were the first things I made with the iPad Pro 12.9" I got around the holidays. 
+<br><br>
+<img src="img/finishedwork.png" class="subtitle" id="fin"><br>
+            <div id="gallery1">
+              <a v-bind:href="'art/20/'+image.src" v-for="image in images">
+                <img v-bind:src="'art/20/'+image.src" :alt="image.alt" :title="image.title" :key="image"/>
+              </a>
+            </div>
+            <a href="#top">Back to top</a>
+            <br><br>
+            <img src="img/roughwork.png" class="subtitle" id="rough"><br>
+            <div id="gallery2">
+              <a v-bind:href="'art/20/'+image.src" v-for="image in images">
+                <img v-bind:src="'art/20/'+image.src" :alt="image.alt" :title="image.title" :key="image"/></a>
+            </div>
+            <a href="#top">Back to top</a>
+          </div>
+            </div>
+            <footer></footer>
+        </div>
+   </div>
+  </body>
+  <script>
+    const { createApp } = Vue
+    createApp({
+      data() {
+        return {
+          images: [{src:"01_22purrloin.jpg"},{src:"02_02ruby-sm.jpg"},{src:"02_03merle.jpg"},{src:"02_23meerz2.jpg"},{src:"02_24trainermarz.png"},{src:"04_27glenda_sm.jpg"},{src:"05_12vi-color.jpg"},{src:"05_12vi-glow.jpg"},{src:"05_14amelia.jpg"},{src:"20_03_10beepaint.jpg"},{src:"20_08_10marz2.png"},{src:"20_09_02rapidash.png"},{src:"20_09_04wena.png"},{src:"20_09_05giraf.png"},{src:"20_09_05raichu.png"},{src:"20_09_06andreas.png"},{src:"20_09_06espeon.png"},{src:"20_09_07melthenumbat.png"},{src:"20_10_07merle.png"},{src:"20_11_XXbebe.png"},{src:"20_12_26rubylines-sm.png"}]
+        }
+      }
+    }).mount('#gallery1')
+
+    createApp({
+      data() {
+        return {
+          images: [{src:"04_31hjghj.jpg"},{src:"04_31tdov.jpg"},{src:"05_12vi.jpg"},{src:"05_17juls.jpg"},{src:"05_30tisq.jpg"},{src:"07_17may.jpg"},{src:"08_26tiefs.jpg"},{src:"09_01espeon.jpg"},{src:"09_02rapidash.jpg"},{src:"09_10outfitmeme.jpg"},{src:"20_08_11trainer.png"},{src:"20_08_12notits.png"},{src:"20_08_18marz.png"},{src:"20_08_18marz2.png"},{src:"20_09_23jewelserval.png"},{src:"20_10_07merles.png"},{src:"20_11_20workjulian1.jpg"},{src:"20_11_20workjulian3.jpg"},{src:"20_11_20workpiers1.jpg"},{src:"20_11_20workpiers4-a_edit.jpg"},{src:"20_11_27zaphs.png"},{src:"20_12_06marzsit.png"},{src:"20_12_09trainers.png"},{src:"20_12_17olly.png"},{src:"asuras.png"},{src:"IMG_20200806_100328.jpg"},{src:"IMG_20200812_131732.jpg"},{src:"12-24-1stmattedoodles.jpg"},{src:"12-23_cute.jpg"},{src:"20-12-27rubyref.png"}]
+        }
+      }
+    }).mount('#gallery2')
+    
+  </script>
+  <script>
+    (function() {
+    var $gallery = new SimpleLightbox('#gallery1 a', {});
+    var $gallery = new SimpleLightbox('#gallery2 a', {});
+    })();
+  </script>
+</html>

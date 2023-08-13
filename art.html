@@ -3,11 +3,14 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ART...2!</title>
+    <title>Art</title>
     <link rel="icon" type="image/x-icon" href="img/cdfavicon.ico">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="simple-lightbox.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css"/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="load.js"></script> 
+    <script src="load.js"></script>
+<script type="text/javascript" src="cursor.js"></script>
     
     </head>
   <body>
@@ -19,14 +22,56 @@
             <img src="img/dolphin.png" id="trdecor">
           <div id="container">   
           <div id="pagecontent">
-            <div id="leftalign">
+            <div id="top"></div>
+            <p>Art | <a href="archive.html">Archive</a><br>
+              <a href="#fin">Finished work</a> | <a href="#rough">Rough work</a>
+              <h3><img src="img/title-art.png" class="subtitle1"></h3>
                 My current work from this year, newest to oldest.
-                Previous years can be found in the archive section.
+                Previous years can be found in the archive section.<br><br>
+                <img src="img/finishedwork.png" class="subtitle" id="fin"><br>
+            <div id="gallery1">
+              <a v-bind:href="'art/'+image.src" v-for="image in images">
+                <img v-bind:src="'art/'+image.src" :alt="image.alt" :title="image.title" :key="image"/>
+              </a><br>
             </div>
+            <a href="#top">Back to top</a><br><br>
+            <img src="img/roughwork.png" class="subtitle" id="rough"><br>
+            <div id="gallery2">
+              <a v-bind:href="'art/'+image.src" v-for="image in images">
+                <img v-bind:src="'art/'+image.src" :alt="image.alt" :title="image.title" :key="image"/></a><br>
+            </div>
+            <a href="#top">Back to top</a><br>
           </div>
             </div>
             <footer></footer>
         </div>
    </div>
   </body>
+  <script>
+    const { createApp } = Vue
+    createApp({
+      data() {
+        return {
+          images: [{src:"23_08_05vapeerling_sm.png"},{src:"23_08_01jett_sm.png"},{src:"23_07_15twinkie_sm.png", title:"Art Fight 2023 attack on Raystarchus. Her OC Twinkie."},{src:"23_07_10quiflex_sm.png", title:"Art Fight 2023 attack on Quiflex"},{src:"23_07_08mosscyrus_sm.png", title:"Art Fight 2023 attack on Cultspawn. His OCs Cyrus and Moss."},{src:"23_07_08mrl.png", title: "me lol"},{src:"23_07_05peony_sm.png", title:"Art Fight 2023 attack on Satorlrosecat. Their fursona Peony."},{src:"23_07_04ruiqui_sm.png", title:"Art Fight 2023 attack on CopperFirebird. His OC Ruiqui."},{src:"23_07_01miyukuna_sm.png", title:"Art Fight 2023 attack on Sheiya. Her OC Miyukuna."},{src:"23_06_28atollabust-edit.png"},{src:"23_06_28atollaref2.png"},{src:"23_06_24mayheadport.png"},{src:"23_06_24bridget_sm.png"},{src:"23_06_21beeref2_sm.png"},{src:"23_06_17valence.png"},{src:"23_06_13chibi-sm.png"},{src:"23_04_19cabbit_sm.png"},{src:"23_04_10rubychibifur-recolor_sm.png"},{src:"23_04_05newruby_sm.png"},{src:"23_03_27atollabust-sm.png"},{src:"23_03_14rubychibifur-sm.png"},{src:"23_02_26dusty_sm.png"},{src:"23_02_16bridget-lounge_sm.png"},{src:"23_02_11qrunchy_badge-crop.png"},{src:"23_02_10snowleopard.png"},{src:"23_02_10maycolor.png"},{src:"23_01_29merleport_sm.png"},{src:"23_01_28dez_cr.png"},{src:"23_01_23beepose_sm.png"},{src:"21_12_05lilskeef-doll-color.png"},{src:"01_04dncskeef-color_sm.png"},{src:"01_04dncskeef_sm.png"}]
+        }
+      }
+    }).mount('#gallery1')
+
+    createApp({
+      data() {
+        return {
+          images: [{src:"23_05_01adventurers_copy.png"},{src:"23_04_29skeefdwarves-edit.png"},{src:"23_04_21morecabbit2.png"},{src:"23_04_21morecabbit1.png"},{src:"23_04_20cabbits.png"},{src:"23_03_04purroinsonic_sm.png"},{src:"23_04_10jett2_sm.png"},{src:"23_04_01ven_sm.png"},{src:"23_03_28atollasparkledog-sm.png"},{src:"23_03_20cheetah-sm.png"},{src:"23_03_16cpapmay_sm.png"},{src:"23_02_20dustyredux_sm.png"},{src:"23_02_19dustystudies-sketch_sm.png"},{src:"23_02_19dustystudies-color_sm.png"},{src:"23_02_19-24genetstudies_sm.png"},{src:"23_02_16bridgets_sm.png"},{src:"23_02_12snowlepdesign_sm.png", title: "Got the itch to make yet another pink cat lmao"},{src:"23_02_10may_sm.png"},{src:"23_02_06critters_sm.png"},{src:"23_02_05maybadgemockup_sm.png"},{src:"23_02_01-04maypacas_sm.png"},{src:"23_01_25merleheads_sm.png"},{src:"23_01_23beepose-sketch_sm.png"},{src:"23_01_19acaraaisha_sm.png"},{src:"23_01_18misc_sm.png"},{src:"23_01_14kougras-cr.png"},
+          {src:"01_04dncskeef-grafaiai_cr.png"},{src:"01_03skeefconcern.png"},{src: "01_02rprskeefs.png", alt: "Three digital pencil bust sketches of a short haired miqote", title: "Skeef in her reaper glams"}
+          ]
+        }
+      }
+    }).mount('#gallery2')
+    
+  </script>
+  <script>
+    (function() {
+    var $gallery = new SimpleLightbox('#gallery1 a', {});
+    var $gallery = new SimpleLightbox('#gallery2 a', {});
+    })();
+  </script>
 </html>

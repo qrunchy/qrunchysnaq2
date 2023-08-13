@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2022</title>
+<link rel="icon" type="image/x-icon" href="img/cdfavicon.ico">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="simple-lightbox.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="load.js"></script>
+<script type="text/javascript" src="cursor.js"></script> 
+  </head>
+  <body>
+    <div id="box">
+        <header></header> 
+        <nav></nav> 
+        <div id="border">
+            <img src="img/dolphin.png" id="tldecor">
+            <img src="img/dolphin.png" id="trdecor">
+          <div id="container">
+          <div id="pagecontent">
+            <div id="top"></div>
+            <p><a href="art.html">Art</a> | <a href="archive.html">Archive</a><br>
+              <div id="archnav"></div>
+              <a href="#fin">Finished work</a> | <a href="#rough">Rough work</a>
+              <h3><img src="img/2022.png" class="subtitle1"></h3>
+              My FFXIV obsession started to die down this year as I finished the story and eventually got a bit burned out on the game.
+              Joined Art Fight for the first time, so I spent a few months preparing refs for that. Really enjoyed it, can't wait to do it again in 2023!
+              Beyond that I just kinda fiddled around, bought a couple adoptables (another first for me), and focused on drawing more consistently. 
+              <br><br>
+              <img src="img/finishedwork.png" class="subtitle" id="fin"><br>
+            <div id="gallery1">
+              <a v-bind:href="'art/22/'+image.src" v-for="image in images">
+                <img v-bind:src="'art/22/'+image.src" :alt="image.alt" :title="image.title" :key="image"/>
+              </a>
+            </div>
+            <a href="#top">Back to top</a>
+            <br><br>
+            <img src="img/roughwork.png" class="subtitle" id="rough"><br>
+            <div id="gallery2">
+              <a v-bind:href="'art/22/'+image.src" v-for="image in images">
+                <img v-bind:src="'art/22/'+image.src" :alt="image.alt" :title="image.title" :key="image"/></a>
+            </div>
+            <a href="#top">Back to top</a>
+          </div>
+            </div>
+            <footer></footer>
+        </div>
+   </div>
+  </body>
+  <script>
+    const { createApp } = Vue
+    createApp({
+      data() {
+        return {
+          images: [{src:"22_01_22cetis.png"},{src:"22_02_03aster.png"},{src:"22_02_13bees.png"},{src:"22_02_15beeoutfits2.png"},{src:"22_03_26kiffarcanist.png"},{src:"22_03_27hermes.png"},{src:"22_04_05softstel2.png"},{src:"22_05_18mel-sastyle_sm.jpg"},{src:"22_05_21wolf-lion_sm.png"},{src:"22_06_26artfight-skeefport.png"},{src:"22_06_28mayref.png"},{src:"22_07_01veiltrois_sm.png"},{src:"22_07_02roberto-sm.png"},{src:"22_07_04srdhine_sm.png"},{src:"22_07_07Nikki_sm.png"},{src:"22_07_15mika-sm.png"},{src:"22_07_16boots_sm.png"},{src:"22_07_23juno-sm.png"},{src:"22_07_24lenkabee_sm.png"},{src:"22_07_30lily_sm.png"},{src:"22_08_05bitsy-sm.png"},{src:"22_08_16prada.jpg"},{src:"22_08_17bebe.jpg"},{src:"22_08_27scenesky2_sm.png"},{src:"22_08_31valenceref_sm2.png"},{src:"22_09_05rayleigh_sm.png"},{src:"22_09_24shirmp2.jpg"},{src:"22_10_08colors_sm.png"},{src:"22_10_14valence-sm.png"},{src:"22_10_17catfairy_sm.png"},{src:"22_10_27holovap_sm.png"},{src:"22_10_29sylveon_sm.jpg"},{src:"22_11_25floragato.png"},{src:"22_11_27miraidon_sm.png"},{src:"22_12_08decomerle_sm.png"}]
+        }
+      }
+    }).mount('#gallery1')
+
+    createApp({
+      data() {
+        return {
+          images: [{src:"22_01_05voidskeef-sm.png"},{src:"22_01_09skeefup.jpg"},{src:"22_01_22necoskeef.jpg"},{src:"22_01_23skeefwreckt.jpg"},{src:"22_01_24dezfaces.jpg"},{src:"22_02_05skeefass-sm.png"},{src:"22_02_15gayriel.png"},{src:"22_03_03_sprigs.png"},{src:"22_03_16mel-dez.png"},{src:"22_03_16mel-dez2.png"},{src:"22_03_23skeefhair-sm.png"},{src:"22_04_11shtola.jpg"},{src:"22_04_15emet.jpg"},{src:"22_05_04julianref.png"},{src:"22_05_10tails.png"},{src:"22_05_10tails2.png"},{src:"22_05_11genet.png"},{src:"22_05_16awkmel.jpg"},{src:"22_05_18melsketch.jpg"},{src:"22_05_19servalideas.jpg"},{src:"22_05_31genet-sm.png"},{src:"22_06_05genetssurge-sm.png"},{src:"22_07_14lovelace.png"},{src:"22_07_14pokomocha.png"},{src:"22_08_09catreece.jpg"},{src:"22_08_09catreece2.jpg"},{src:"22_08_14colgate.jpg"},{src:"22_09_12valesketches_sm.png"},{src:"22_09_21hermes.jpg"},{src:"22_10_09octocolors.png"},{src:"22_10_23chao-sm.jpg"},{src:"22_10_25training_sm.png"},{src:"22_12_01skeefs_sm.png"}]
+        }
+      }
+    }).mount('#gallery2')
+    
+  </script>
+  <script>
+    (function() {
+    var $gallery = new SimpleLightbox('#gallery1 a', {});
+    var $gallery = new SimpleLightbox('#gallery2 a', {});
+    })();
+  </script>
+</html>

@@ -1,50 +1,60 @@
-01_02rprskeefs.png
-01_03skeefconcern.png
-01_04dncskeef-color_sm.png
-01_04dncskeef-grafaiai_cr.png
-01_04dncskeef_sm.png
-21_12_05lilskeef-doll-color.png
-23_01_14kougras-cr.png
-23_01_18misc_sm.png
-23_01_19acaraaisha_sm.png
-23_01_23beepose-sketch_sm.png
-23_01_23beepose_sm.png
-23_01_25merleheads_sm.png
-23_01_28dez_cr.png
-23_01_29merleport_sm.png
-23_02_01-04maypacas_sm.png
-23_02_05maybadgemockup_sm.png
-23_02_06critters_sm.png
-23_02_10maycolor.png
-23_02_10may_sm.png
-23_02_10snowleopard.png
-23_02_11qrunchy_badge-crop.png
-23_02_12snowlepdesign_sm.png
-23_02_16bridget-lounge_sm.png
-23_02_16bridgets_sm.png
-23_02_19-24genetstudies_sm.png
-23_02_19dustystudies-color_sm.png
-23_02_19dustystudies-sketch_sm.png
-23_02_20dustyredux_sm.png
-23_02_26dusty_sm.png
-23_03_04purroinsonic_sm.png
-23_03_14rubychibifur-sm.png
-23_03_16cpapmay_sm.png
-23_03_20cheetah-sm.png
-23_03_27atollabust-sm.png
-23_03_28atollasparkledog-sm.png
-23_04_01ven_sm.png
-23_04_05newruby_sm.png
-23_04_10jett2_sm.png
-23_04_10rubychibifur-recolor_sm.png
-23_04_19cabbit_sm.png
-23_04_20cabbits.png
-23_04_21morecabbit-thumb.png
-23_04_21morecabbit1.png
-23_04_21morecabbit2-thumb.png
-23_04_21morecabbit2.png
-23_04_29skeefdwarves-edit.png
-23_04_29skeefdwarves-thumb.png
-23_05_01adventurers-thumb.png
-23_05_01adventurers_copy.png
-23_06_13chibi-sm.png
+ Volume in drive C is Big Beautiful Buick Enclave
+ Volume Serial Number is 0C66-9ED8
+
+ Directory of C:\Users\Mariel\Dropbox\neocities\qrunchysnaq2\art
+
+07/17/2023  10:08 PM    <DIR>          .
+07/17/2023  10:08 PM    <DIR>          ..
+05/28/2023  11:48 AM           715,622 01_02rprskeefs.png
+05/28/2023  11:48 AM           473,437 01_03skeefconcern.png
+05/28/2023  11:48 AM         1,191,835 01_04dncskeef-color_sm.png
+05/28/2023  11:48 AM           291,226 01_04dncskeef-grafaiai_cr.png
+05/28/2023  11:48 AM         1,295,533 01_04dncskeef_sm.png
+05/28/2023  11:48 AM           242,951 21_12_05lilskeef-doll-color.png
+05/28/2023  11:48 AM           190,185 23_01_14kougras-cr.png
+05/28/2023  11:48 AM           549,379 23_01_18misc_sm.png
+05/28/2023  11:48 AM           238,540 23_01_19acaraaisha_sm.png
+05/28/2023  11:48 AM           248,155 23_01_23beepose-sketch_sm.png
+05/28/2023  11:48 AM           179,228 23_01_23beepose_sm.png
+05/28/2023  11:48 AM           976,154 23_01_25merleheads_sm.png
+05/28/2023  11:48 AM           311,849 23_01_28dez_cr.png
+05/28/2023  11:48 AM           266,979 23_01_29merleport_sm.png
+05/28/2023  11:48 AM           535,992 23_02_01-04maypacas_sm.png
+05/28/2023  11:48 AM           712,559 23_02_05maybadgemockup_sm.png
+05/28/2023  11:48 AM           345,050 23_02_06critters_sm.png
+05/28/2023  11:48 AM           214,645 23_02_10maycolor.png
+05/28/2023  11:48 AM           190,491 23_02_10may_sm.png
+05/28/2023  11:48 AM           985,751 23_02_10snowleopard.png
+05/28/2023  11:48 AM         1,261,630 23_02_11qrunchy_badge-crop.png
+05/28/2023  11:48 AM           466,666 23_02_12snowlepdesign_sm.png
+05/28/2023  11:48 AM           985,883 23_02_16bridget-lounge_sm.png
+05/28/2023  11:48 AM           461,344 23_02_16bridgets_sm.png
+05/28/2023  11:48 AM           242,142 23_02_19-24genetstudies_sm.png
+05/28/2023  11:48 AM           384,153 23_02_19dustystudies-color_sm.png
+05/28/2023  11:48 AM           357,196 23_02_19dustystudies-sketch_sm.png
+05/28/2023  11:48 AM           329,363 23_02_20dustyredux_sm.png
+05/28/2023  11:48 AM           362,963 23_02_26dusty_sm.png
+05/28/2023  11:48 AM           170,917 23_03_04purroinsonic_sm.png
+05/28/2023  11:48 AM           275,337 23_03_14rubychibifur-sm.png
+05/28/2023  11:48 AM           274,261 23_03_16cpapmay_sm.png
+05/28/2023  11:48 AM           216,897 23_03_20cheetah-sm.png
+05/28/2023  11:48 AM           356,152 23_03_27atollabust-sm.png
+05/28/2023  11:48 AM           413,223 23_03_28atollasparkledog-sm.png
+05/28/2023  11:48 AM           684,269 23_04_01ven_sm.png
+05/28/2023  11:48 AM           401,626 23_04_05newruby_sm.png
+05/28/2023  11:48 AM           393,770 23_04_10jett2_sm.png
+05/28/2023  11:48 AM           353,390 23_04_10rubychibifur-recolor_sm.png
+05/28/2023  11:48 AM           271,522 23_04_19cabbit_sm.png
+05/28/2023  11:48 AM           370,360 23_04_20cabbits.png
+05/28/2023  11:48 AM           197,942 23_04_21morecabbit-thumb.png
+05/28/2023  11:48 AM           296,362 23_04_21morecabbit1.png
+05/28/2023  11:48 AM            87,086 23_04_21morecabbit2-thumb.png
+05/28/2023  11:48 AM           201,846 23_04_21morecabbit2.png
+05/28/2023  11:48 AM           598,753 23_04_29skeefdwarves-edit.png
+05/28/2023  11:48 AM           139,223 23_04_29skeefdwarves-thumb.png
+05/28/2023  11:48 AM           125,719 23_05_01adventurers-thumb.png
+05/28/2023  11:48 AM           263,240 23_05_01adventurers_copy.png
+06/15/2023  07:36 PM           297,175 23_06_13chibi-sm.png
+07/17/2023  10:08 PM               157 names.txt
+              51 File(s)     21,396,128 bytes
+               2 Dir(s)  349,181,349,888 bytes free

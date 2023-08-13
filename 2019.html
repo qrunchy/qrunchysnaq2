@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2019</title>
+<link rel="icon" type="image/x-icon" href="img/cdfavicon.ico">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="simple-lightbox.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="load.js"></script>
+<script type="text/javascript" src="cursor.js"></script> 
+  </head>
+  <body>
+    <div id="box">
+        <header></header> 
+        <nav></nav> 
+        <div id="border">
+            <img src="img/dolphin.png" id="tldecor">
+            <img src="img/dolphin.png" id="trdecor">
+          <div id="container">
+          <div id="pagecontent">
+            <div id="top"></div>
+            <p><a href="art.html">Art</a> | <a href="archive.html">Archive</a><br>
+              <div id="archnav"></div>
+              <a href="#fin">Finished work</a> | <a href="#rough">Rough work</a>
+              <h3><img src="img/2019.png" class="subtitle1"></h3>
+              I didn't get to draw much in 2019 as that was the year I started my first full time job in years and had finally moved out of my grandmother's house. I didn't have a lot of time or energy to draw as a result. This year is honestly a blur to me so I don't really remember much about where I was creatively. I know I played like, a shit load of guild wars 2 so once again that was a huge chunk of what I drew.
+              <br><br>
+              <img src="img/finishedwork.png" class="subtitle" id="fin"><br>
+            <div id="gallery1">
+              <a v-bind:href="'art/19/'+image.src" v-for="image in images">
+                <img v-bind:src="'art/19/'+image.src" :alt="image.alt" :title="image.title" :key="image"/>
+              </a>
+            </div>
+            <a href="#top">Back to top</a>
+            <br><br>
+            <img src="img/roughwork.png" class="subtitle" id="rough"><br>
+            <div id="gallery2">
+              <a v-bind:href="'art/19/'+image.src" v-for="image in images">
+                <img v-bind:src="'art/19/'+image.src" :alt="image.alt" :title="image.title" :key="image"/></a>
+            </div>
+            <a href="#top">Back to top</a>
+          </div>
+            </div>
+            <footer></footer>
+        </div>
+   </div>
+  </body>
+  <script>
+    const { createApp } = Vue
+    createApp({
+      data() {
+        return {
+          images: [{src:"01-14vi.png"},{src:"01-25merle2.png"},{src:"04_12belvedere.jpg"},{src:"07-07ruby-sm.jpg"},{src:"07_22maymars.jpg"},{src:"12-13ewin.jpg"},{src:"12-7trainer-marz.png"},{src:"12_23ruby.jpg"},{src:"19_12_06-ruby2.png"}]
+        }
+      }
+    }).mount('#gallery1')
+
+    createApp({
+      data() {
+        return {
+          images: [{src:"01-05val.jpg"},{src:"01-10stel.jpg"},{src:"01-10vi.jpg"},{src:"01-11billy.png"},{src:"01-11stelfaces.jpg"},{src:"01-11stelscared.jpg"},{src:"01-16roobs.png"},{src:"01-17roobs.jpg"},{src:"01-30stel.jpg"},{src:"02-02stel.jpg"},{src:"02-08caithe.jpg"},{src:"02-09taimi.jpg"},{src:"02-10longstel.jpg"},{src:"04-02ewin.png"},{src:"04-11zoras.jpg"},{src:"04_10zaph-edit.jpg"},{src:"04_10zaph2-edit.jpg"},{src:"04_11biza-edit.jpg"},{src:"04_11biza2-edit.jpg"},{src:"07_13degga.jpg"},{src:"07_20rubycolor.jpg"},{src:"09_12degga.png"},{src:"11_03merz.jpg"},{src:"11_03merz2.jpg"},{src:"12-01carbuncle.jpg"},{src:"12-08pokes.jpg"},{src:"12-13erintrainer.png"},{src:"12-1trainer-marz.jpg"},{src:"12-xxruby.png"},{src:"12_22pokes.jpg"}]
+        }
+      }
+    }).mount('#gallery2')
+    
+  </script>
+  <script>
+    (function() {
+    var $gallery = new SimpleLightbox('#gallery1 a', {});
+    var $gallery = new SimpleLightbox('#gallery2 a', {});
+    })();
+  </script>
+</html>

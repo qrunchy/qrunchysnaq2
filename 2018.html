@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2018</title>
+<link rel="icon" type="image/x-icon" href="img/cdfavicon.ico">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="simple-lightbox.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="load.js"></script>
+<script type="text/javascript" src="cursor.js"></script> 
+  </head>
+  <body>
+    <div id="box">
+        <header></header> 
+        <nav></nav> 
+        <div id="border">
+            <img src="img/dolphin.png" id="tldecor">
+            <img src="img/dolphin.png" id="trdecor">
+          <div id="container">
+          <div id="pagecontent">
+            <div id="top"></div>
+            <p><a href="art.html">Art</a> | <a href="archive.html">Archive</a><br>
+              <div id="archnav"></div>
+              <a href="#fin">Finished work</a> | <a href="#rough">Rough work</a>
+              <h3><img src="img/2018.png" class="subtitle1"></h3>
+              I got back into flight rising this year, while the Guild Wars 2 obsession continued. Got really absorbed into trying to design Ruby, my fourth fursona, who's been the hardest for me to settle on even a general design for. 
+              <br><br>
+              <img src="img/finishedwork.png" class="subtitle" id="fin"><br>
+            <div id="gallery1">
+              <a v-bind:href="'art/18/'+image.src" v-for="image in images">
+                <img v-bind:src="'art/18/'+image.src" :alt="image.alt" :title="image.title" :key="image"/>
+              </a>
+            </div>
+            <a href="#top">Back to top</a>
+            <br><br>
+            <img src="img/roughwork.png" class="subtitle" id="rough"><br>
+            <div id="gallery2">
+              <a v-bind:href="'art/18/'+image.src" v-for="image in images">
+                <img v-bind:src="'art/18/'+image.src" :alt="image.alt" :title="image.title" :key="image"/></a>
+            </div>
+            <a href="#top">Back to top</a>
+          </div>
+            </div>
+            <footer></footer>
+        </div>
+   </div>
+  </body>
+  <script>
+    const { createApp } = Vue
+    createApp({
+      data() {
+        return {
+          images: [{src:"01_20unicorn.png"},{src:"03_25djfjafj2.png"},{src:"04_07merlejump_pnk2.png"},{src:"04_09beejump_blu.png"},{src:"04_20-comp.png"},{src:"04_21mayjump.png"},{src:"04_26ghoul.png"},{src:"05_10vi.png"},{src:"05_17pootsy.png"},{src:"06_12katze.png"},{src:"07_10tisqchill.png"},{src:"07_12deggaride_shade.png"},{src:"07_17smiggcritters.png"}]
+        }
+      }
+    }).mount('#gallery1')
+
+    createApp({
+      data() {
+        return {
+          images: [{src:"02_07avises.png"},{src:"04_20-2.png"},{src:"04_20.png"},{src:"04_25.png"},{src:"04_27.png"},{src:"05_04.png"},{src:"05_17.png"},{src:"05_18.png"},{src:"05_23 copy.png"},{src:"06_12capsule-newbie.png"},{src:"06_12katze-sketch.png"},{src:"06_18stel copy.png"},{src:"07_10deggaride.png"},{src:"07_17-23.png"},{src:"07_25asters copy.png"},{src:"08_08jambers.png"},{src:"08_10-crop.png"},{src:"09_13 copy.png"},{src:"11_09 copy.png"},{src:"11_09sktchs.png"},{src:"11_16vis.png"},{src:"11_17vis copy.png"},{src:"11_18 copy.png"},{src:"11_25 copy.png"},{src:"12_05-2.png"},{src:"12_05-mays copy.png"},{src:"12_06 copy.png"},{src:"12_06 copy2.png"},{src:"12_06-2 copy.png"},{src:"12_06-ruby2.png"},{src:"12_07-roob2.png"}]
+        }
+      }
+    }).mount('#gallery2')
+    
+  </script>
+  <script>
+    (function() {
+    var $gallery = new SimpleLightbox('#gallery1 a', {});
+    var $gallery = new SimpleLightbox('#gallery2 a', {});
+    })();
+  </script>
+</html>

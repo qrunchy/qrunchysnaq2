@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <atom:link href="https://qrunchysnaq.neocities.org/feed.xml" rel="self" type="application/rss+xml" />
+        <title>QRUNCHYSNAQ</title>
+        <link>https://qrunchysnaq.neocities.org/</link>
+        <description>Hello! Call me Merle~ Welcome to my silly little site full of stuff I like and things I like to do.</description>
+        <language>en-us</language>
+        <item>
+    <title>Updates</title>
+    <pubDate>Sun, 14 May 2023 21:11:00 CST</pubDate>
+    <link>https://qrunchysnaq.neocities.org</link>
+    <guid>https://qrunchysnaq.neocities.org</guid>
+    <description>Added an RSS feed for the Updates box for those interested in following the site's development. :3 Still learning how to maintain a feed, sorry for any weirdness at first. </description>
+    </item>
+    </channel>
+</rss>

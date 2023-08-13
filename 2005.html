@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2005</title>
+<link rel="icon" type="image/x-icon" href="img/cdfavicon.ico">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="simple-lightbox.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="load.js"></script>
+<script type="text/javascript" src="cursor.js"></script> 
+  </head>
+  <body>
+    <div id="box">
+        <header></header> 
+        <nav></nav> 
+        <div id="border">
+            <img src="img/dolphin.png" id="tldecor">
+            <img src="img/dolphin.png" id="trdecor">
+          <div id="container">
+          <div id="pagecontent">
+            <p><a href="art.html">Art</a> | <a href="archive.html">Archive</a><br>
+              <div id="archnav"></div>
+              <h3><img src="img/2003.png" class="subtitle1"></h3>
+              Not sure exactly when these were from, at some point I had dated them around 2003. Ahh, Painter Classic, my first love. Just wish I could have more art from this time but I deleted my Elfwood from back then, for some reason. 
+            <div id="gallery1">
+              <a v-bind:href="'art/03-05/'+image.src" v-for="image in images">
+                <img v-bind:src="'art/03-05/'+image.src" :alt="image.alt" :title="image.title" :key="image"/>
+              </a>
+            </div>
+            <h3><img src="img/2005.png" class="subtitle1"></h3>
+            These were the The Lion King Fan Art Archive days. My TLKFAA page is actually still up and active, though I haven't used it in over a decade. I've since cleared out the Deviantart account I had at the time and anything I had on Sheezyart was lost when they shut down, so my Lion King fan art is almost all I have from before 2007. I really did not have an instinct to preserve my art until my teens, unfortunately.  
+            <div id="gallery2">
+              <a v-bind:href="'art/03-05/'+image.src" v-for="image in images">
+                <img v-bind:src="'art/03-05/'+image.src" :alt="image.alt" :title="image.title" :key="image"/></a>
+            </div>
+          </div>
+            </div>
+            <footer></footer>
+        </div>
+   </div>
+  </body>
+  <script>
+    const { createApp } = Vue
+    createApp({
+      data() {
+        return {
+          images: [{src:"11_18SimbaPaint.png"},{src:"11_19AyaniFin.png"},{src:"12_02AtoFin.png"},{src:"12_19Sora.png"},{src:"12_21JazRevamped.png"},{src:"12_22JazfullEdit.gif"}]
+        }
+      }
+    }).mount('#gallery1')
+
+    createApp({
+      data() {
+        return {
+          images: [{src:"2003aminuls.jpg"},{src:"2003fantastical.jpg"},{src:"2003new_style_guys.jpg"}]
+        }
+      }
+    }).mount('#gallery2')
+    
+  </script>
+  <script>
+    (function() {
+    var $gallery = new SimpleLightbox('#gallery1 a', {});
+    var $gallery = new SimpleLightbox('#gallery2 a', {});
+    })();
+  </script>
+</html>
