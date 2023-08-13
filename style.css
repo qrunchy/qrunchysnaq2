@@ -37,6 +37,10 @@ html{
     align-content: baseline;
 }
 
+.vertical-align {
+  vertical-align: baseline !important; 
+}
+
 .center {
   text-align:center;
 }
