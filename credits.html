@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credits</title>
+<link rel="icon" type="image/x-icon" href="img/cdfavicon.ico">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="load.js"></script>
+<script type="text/javascript" src="cursor.js"></script>
+<script src="freezeframe.min.js"></script>
+    </head>
+  <body>
+    <div id="box">
+        <header></header> 
+        <nav></nav> 
+          <div id="border">
+            <img src="img/dolphin.png" id="tldecor" alt="decorative dolphin facing left">
+          <img src="img/dolphin.png" id="trdecor" alt="decorative dolphin facing right">
+          <div id="container">   
+          <div id="pagecontent" tabindex="0">
+            <!--credits-->           
+            <p class="center"><img src="img/credits.png" class="subtitle1"></p>
+            Here's where you can find the sources for most of the assets and graphics I did not create. If you want to know where I got something not lised here, feel free to shoot me an email at <i><SCRIPT LANGUAGE="JavaScript">user = 'qrunchy';site = '32bit.cafe';document.write(user + '@' + site);</SCRIPT></i>.<br>
+            Gifs on this page have been paused by default! You can toggle them using the buttons below.<br>
+            <p>
+                <button id="start" class="button">Play GIFs</button>
+                <button id="stop" class="button">Stop GIFs</button>
+            </p>
+            <p><b>Fonts:</b><br>
+                Body text - Hyperlegible - <a href="https://brailleinstitute.org/freefont" target="_blank">Braille Institute</a><br>
+                 Main header - Halcyon - <a href="https://hvnter.net/" target="_blank">Hvnter.net</a><br>
+                Navigation and subtitles - Berrie - <a href="https://hvnter.net/" target="_blank">Hvnter.net</a>
+                <p>Sonic Adventure shrine: <br>
+                    Body text - Gill Sans<br>
+                    Navigation and subtitles - <a href="http://actselect.chips.jp/fonts/06.htm" target="_blank">Nise Sega Sonic</a><br>
+                    </p>
+            </p>
+            <p><b>Images:</b><br>
+                Background image - Photo by <a href="https://unsplash.com/@mathildeeee" target="_blank">Mathilde Normandeau</a>, edited by me<br>
+                Sonic Adventure shrine background image - Photo by <a href="https://unsplash.com/@marissar_" target="_blank">Marissa Rodriguez</a>, edited by me<br>
+                Dolphin - Clip art, edited by me.
+            </p>
+            
+            <p class="center">These are the various sites I have nabbed graphics from:<br>
+            <span class="freezeframe"><a href="https://pinkukingdom.neocities.org/"><img src="img/links/pinukingdom2.gif" alt="Pinku Kingdom" target="_blank"></a> <a href="https://cinni.net/" target="_blank"><img src="img/links/cinni_angelbutton3.gif"></a> <a href="https://hhgreggcult.neocities.org/"><img src="img/links/hhgreggcult button.png" alt="HHGreggCult" target="_blank"></a> <a href="http://plasticdino.neocities.org"><img src="img/links/plasticdino.gif" target="_blank"></a> <a href="https://keysklubhouse.com/" target="_blank"><img src="img/links/kklink4.gif"></a> <br>
+                <a href="https://blinkies.neocities.org/index.html" target="_blank">The Blinkie Hoard</a> ✿ 
+                <a href="https://toyhou.se/15166219.page-decor" target="_blank">Chot @ Toyhouse</a>
+                <br><br>
+                Adoptables:<br>
+                <a href="https://www.lejlart.com/apple.html" target="_blank"><img src="img/links/butapple6.gif"></a> <a href="http://whimsical.heartette.net" target="_blank"><img src="img/links/whimsical-heartette.gif"></a> <a href="http://caz.pausedlife.com" target="_blank"><img src="img/links/StarButton.gif"></a> <a href="https://vampirevalentine.neocities.org/" target="_blank"><img src="img/links/vampirevalentine.gif"></a> <a href="https://www.lovetiny.art" target="_blank"><img src="img/links/lovetinybutton.gif"></a> <a href="https://sweetcharm.net/" target="_blank"><img src="img/links/sweetcharms-bannericeream.gif"></a> <a href="https://web.archive.org/web/20100215204709/http://www.glittercandybox.com/2007/08/link-sg.html" target="_blank"><img src="img/links/gcb2.gif"></a> <a href="https://pastelhello.com/" target="_blank"><img src="img/links/pcafebutton.png"></a>
+
+            </span>
+            </p>
+        </div>
+    </div>
+    <footer></footer>
+  </div>
+</div>
+<script>
+const manual = new Freezeframe('.freezeframe', {
+trigger: false
+});
+
+document
+.querySelector('#start')
+.addEventListener('click', () => {
+manual.start();
+});
+
+document
+.querySelector('#stop')
+.addEventListener('click', () => {
+manual.stop();
+});
+</script>
+</body>
+</html>

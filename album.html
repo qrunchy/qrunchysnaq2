@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Album</title>
+<link rel="icon" type="image/x-icon" href="img/cdfavicon.ico">
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="simple-lightbox.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="load.js"></script>
+<script type="text/javascript" src="cursor.js"></script>
+    </head>
+  <body>
+    <div id="box">
+        <header></header> 
+        <nav></nav> 
+          <div id="border">
+            <img src="img/dolphin.png" id="tldecor" alt="decorative dolphin facing left">
+          <img src="img/dolphin.png" id="trdecor" alt="decorative dolphin facing right">
+          <div id="container">   
+          <div id="pagecontent" tabindex="0">
+            <a href="neutral.html">Neutral Garden</a> | <a href="hero.html">Hero Garden</a> | <a href="dark.html">Dark Garden</a><br>
+            <a href="chao.html">Back</a> <br><br>
+            <h1><img src="img/chao/photoalbum.png" class="gardenbanner" alt="Screenshot of Tails petting three chao with text that reads 'Photo Album'"></h1>
+            <p>Hi welcome to my chao photo album! This is just a gallery of my little guys hanging out and having fun.</p>
+            <div id="gallery1">
+                <a v-bind:href="'img/chao/album/'+image.src" v-for="image in images">
+                  <img v-bind:src="'img/chao/album/'+image.src" :alt="image.alt" :title="image.title" :key="image"/>
+                </a>
+              </div>
+            <a href="chao.html">Back</a>
+        </div>
+        </div>
+            <footer></footer>
+          </div>
+   </div>
+  </body>
+  <script>
+    const { createApp } = Vue
+    createApp({
+      data() {
+        return {
+          images: [{src:"2023-08-05 leon_orville.png", title: "Leon and Orville having a deep conversation"},{src:"2020-11-02vic_kiki_opal.png", title: "Vic celebrating while Kiki evolves"},{src:"2022-08-27audie_snarf.png", title: "Audie and Snarf sharing some hot gossip"},{src:"blanc_prada_iver-pile.png", title: "Blanc and Iver trying to have a conversation over a sleeping Prada"},{src:"2022-08-07gabe_rav.png", title: "Gabe and Rav hanging out"}]
+        }
+      }
+    }).mount('#gallery1') 
+  </script>
+  <script>
+    (function() {
+    var $gallery = new SimpleLightbox('#gallery1 a', {});
+    })();
+  </script>
+</html>

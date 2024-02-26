@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2015</title>
+<link rel="icon" type="image/x-icon" href="img/cdfavicon.ico">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="simple-lightbox.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="load.js"></script>
+<script type="text/javascript" src="cursor.js"></script> 
+  </head>
+  <body>
+    <div id="box">
+        <header></header> 
+        <nav></nav> 
+        <div id="border">
+            <img src="img/dolphin.png" id="tldecor" alt="decorative dolphin facing left">
+          <img src="img/dolphin.png" id="trdecor" alt="decorative dolphin facing right">
+          <div id="container">
+          <div id="pagecontent" tabindex="0">
+            <div id="top"></div>
+            <p>Art | <a href="archive.html" target="_blank">Archive</a><br>
+              <div id="archnav"></div>
+              <a href="#fin">Finished work</a> | <a href="#rough">Rough work</a><br><br>
+              <img src="img/2015.png" class="subtitle1"><br>
+              This was the last year I would spend at the college I was attending, since I dropped out of the art program toward the end of the fall semester. My mental health issues had reached an unbearable peak, and I realized a career in art wasn't what I actually wanted after all.<br>
+              The Steven Universe fixation continues. It took me a while to figure out my gemsona's design, and I never really wound up with anything that stuck, but I think the design I went with lasted a while. I still want to redesign her honestly. I played through Twilight Princess and fell deeply in love with it, sparking a general fixation on Zelda that has continued to come and go since.
+              <br><br>
+              <h2><img src="img/finishedwork.png" class="subtitle" id="fin" alt="Finished Work"></h2>
+            <div id="gallery1">
+              <a v-bind:href="'art/15/'+image.src" v-for="image in images">
+                <img v-bind:src="'art/15/thumbs/'+image.src" :alt="image.alt" :title="image.title" :style="image.style" :key="image"/>
+              </a>
+            </div>
+            <a href="#top">Back to top</a>
+            <br><br>
+            <h2><img src="img/roughwork.png" class="subtitle" id="rough" alt="Rough Work"></h2>
+            <div id="gallery2">
+              <a v-bind:href="'art/15/rough/'+image.src" v-for="image in images">
+                <img v-bind:src="'art/15/rough/thumbs/'+image.src" :alt="image.alt" :title="image.title" :style="image.style" :key="image"/></a>
+            </div>
+            <a href="#top">Back to top</a>
+          </div>
+            </div>
+            <footer></footer>
+        </div>
+   </div>
+  </body>
+  <script>
+    const { createApp } = Vue
+    createApp({
+      data() {
+        return {
+          images: [{src:"15_01_12xerneas_c.png"},{src:"15_01_16gaayy.png"},{src:"15_02_14maysit.png"},{src:"15_02_28witchsona.png"},{src:"15_03_02wnkjns.png"},{src:"15_04_04mayavbig.png"},{src:"15_06_05mayem.png"},{src:"15_06_19rainbowquartz.png"},{src:"15_07_15sadgays_lg.jpg"},{src:"15_09_07zelders.png"},{src:"15_12_27bebebebe.png"},{src:"15_12_27RADJOOX.png"}]
+        }
+      }
+    }).mount('#gallery1')
+
+    createApp({
+      data() {
+        return {
+          images: [{src:"15_01_03babsncritters.jpg"},{src:"15_01_11babshair.jpg"},{src:"15_01_12angewomon.jpg"},{src:"15_01_12garnetlucario.png"},{src:"15_01_12xerneas.png"},{src:"15_01_15fam.jpg"},{src:"15_01_20pals.jpg", title:"Some really old OCs of mine, some of them have changed since"},{src:"15_01_23brothers.jpg"},{src:"15_01_23critter.png"},{src:"15_01_24bros.jpg"},{src:"15_01_30sanicstyle.png"},{src:"15_01_31cetis.png"},{src:"15_02_01klonoa.jpg"},{src:"15_02_02brofights.png"},{src:"15_02_02lol.jpg"},{src:"15_02_07mayvents.jpg"},{src:"15_02_22swings.jpg"},{src:"15_03_12jams.jpg"},{src:"15_03_13moreiris.jpg"},{src:"15_03_18sadcube.png"},{src:"15_03_21malxochitl.png"},{src:"15_03_22irisagate.png"},{src:"15_03_22irisstand.png"},{src:"15_03_30irisaCAT.png"},{src:"15_04_12napoleonnewdes2_lvls.png"},{src:"15_04_27critters.png"},{src:"15_04_27skullface.png"},{src:"15_04_28irisagate_redraw.png"},{src:"15_05_05irissalute.png"},{src:"15_05_07skullcat.png"},{src:"15_05_23pearlmethyst.png"},{src:"15_05_23pearlrose.png"},{src:"15_05_23piggybacks_crop.png"},{src:"15_05_27critter.jpg"},{src:"15_06_01newhair.jpg"},{src:"15_06_05mayems.jpg"},{src:"15_07_08zora.png"},{src:"15_07_09zora.jpg"},{src:"15_07_09zora2.jpg", style:"object-position:25px 0px;"},{src:"15_07_11babsy.png"},{src:"15_07_13mals.jpg"},{src:"15_07_13sardy.png"},{src:"15_07_17lastparty.png"},{src:"15_07_25adultlink.png"},{src:"smollink.png"},{src:"15_07_25eno.png"},{src:"15_07_25impa.png"},{src:"15_07_25skdump-eno.png"},{src:"15_07_26ghirahim.jpg"},{src:"15_07_26impa.png"},{src:"15_07_29iris.jpg"},{src:"15_08_07babies.jpg", style:"object-position:31px 0px;"},{src:"15_08_12babslucy.png"},{src:"15_11_05_Maypaca-edit.png"},{src:"15_11_14mayy.jpg"},{src:"15_12_27irisagate.png"},{src:"15_12_27ren.jpg"},{src:"15_12_28-01-edit.png", title:"Larsadie drawing I did for a friend. Not my ship lmao"},{src:"15_12_31-collage.png"},{src:"img020.png"},{src:"img023.png"},{src:"Jem.png"},{src:"jemss.png"},{src:"mays.png"},{src:"maysweater.png"},{src:"pacas.jpg"},{src:"sadsteven.png"},]
+        }
+      }
+    }).mount('#gallery2')
+    
+  </script>
+  <script>
+    (function() {
+    var $gallery = new SimpleLightbox('#gallery1 a', {});
+    var $gallery = new SimpleLightbox('#gallery2 a', {});
+    })();
+  </script>
+</html>
