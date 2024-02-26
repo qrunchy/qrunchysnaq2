@@ -1,105 +1,197 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STASH... 2!</title>
+    <title>Stash</title>
+<link rel="icon" type="image/x-icon" href="img/cdfavicon.ico">
     <link rel="stylesheet" type="text/css" href="style.css"/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="load.js"></script> 
+    <script src="load.js"></script>
+<script type="text/javascript" src="cursor.js"></script>
+<script src="freezeframe.min.js"></script>
     </head>
   <body>
     <div id="box">
         <header></header> 
         <nav></nav> 
           <div id="border">
-            <img src="img/dolphin.png" id="tldecor">
-            <img src="img/dolphin.png" id="trdecor">
+            <img src="img/dolphin.png" id="tldecor" alt="decorative dolphin facing left">
+          <img src="img/dolphin.png" id="trdecor" alt="decorative dolphin facing right">
           <div id="container">   
-          <div id="pagecontent">
+          <div id="pagecontent" tabindex="0">
             <h2><img src="img/graphicstash copy.png" class="subtitle1"></h2>
-            <div id="links">
-                This is where I show off a bunch of graphics I've collected across the internet! I was a huge fan of Deviantart stamps back in high school and I was so happy to see them live on across the internet after dA stopped letting us display stamp collections on the site. It's only natural that I would start ferreting away all kinds of other little shareable pictures, hehe. :P Hope you enjoy perusing my ever growing stash!<br>
-          Some of these link back to their creators, others to wherever I found them. Some don't link out anywhere at all because I couldn't find a source. Sorry! I try to credit where I can.<br><br>
+            <div class="leftalign">
+                This is where I show off my little collection from across the internet! I was a huge fan of Deviantart stamps back in high school and I was so happy to see them live on across the internet after their heyday. It's only natural that I would start ferreting away all kinds of other little shareable pictures, hehe. :P Hope you enjoy perusing my ever growing stash!<br>
+                Some of these link back to their creators, others to wherever I found them. Some don't link out anywhere at all because I couldn't find a source. Sorry! I try to credit where I can.<br>Gifs on this page have been paused by default! You can toggle them using the buttons below.<br><br>
             </div>
-            <h3>Adopts</h3>
+            <button id="start" class="button">Play GIFs</button>
+            <button id="stop" class="button">Stop GIFs</button>
+            <br><br>
+            <!--ADOPTS-->
+            <img src="img/adopts.png" class="subtitle"><br>
+            <span class="freezeframe">
+            <a href="https://vampirevalentine.neocities.org/" target="_blank"><img src="img/adopts/vampirevalentine-tydragon.png"></a>
+            <a href="https://cinni.net/" target="_blank"><img src="img/adopts/cinni-cherry-cat.png"></a>
+            <a href="https://realachao.xyz/" target="_blank"><img src="img/adopts/reala-heropixel.png"></a>
+            <a href="https://realachao.xyz/" target="_blank"><img src="img/adopts/reala-babychaopixel.png"></a>
+            <a href="https://realachao.xyz/" target="_blank"><img src="img/adopts/reala-darkpixel.png"></a>
+            <a href="https://www.lovetiny.art/" target="_blank"><img src="img/adopts/lovetiny-emopup.png"></a>
+            <a href="https://sweetcharm.net/" target="_blank"><img src="img/adopts/EyeBatALTCOLOR2.gif"></a>
+            <a href="https://pastelhello.com/" target="_blank"><img src="img/adopts/pastelhello-marc.gif"></a>
+            <br>
             <a href="https://www.lejlart.com/apple.html" target="_blank"><img src="img/adopts/unipix2.gif"></a> 
             <a href="https://www.lejlart.com/apple.html" target="_blank"><img src="img/adopts/LF_unicorn.png"></a> 
             <a href="https://www.lejlart.com/apple.html" target="_blank"><img src="img/adopts/LF_tiger.png"></a> 
             <a href="https://www.lejlart.com/apple.html" target="_blank"><img src="img/adopts/babyuniblink.gif"></a> 
             <a href="https://www.lejlart.com/apple.html" target="_blank"><img src="img/adopts/babykougra_anim.gif"></a> 
+            <a href="https://web.archive.org/web/20090727191335/http://hk.geocities.com/hkdigimonf/i-con.htm" target="_blank"><img src="img/adopts/24_c.gif"></a>
+            <a href="https://web.archive.org/web/20090727191335/http://hk.geocities.com/hkdigimonf/i-con.htm" target="_blank"><img src="img/adopts/21.gif"></a>
+            <a href="https://web.archive.org/web/20090727191335/http://hk.geocities.com/hkdigimonf/i-con.htm" target="_blank"><img src="img/adopts/10.gif"></a>
             <a href="http://whimsical.heartette.net" target="_blank"><img src="img/adopts/whimsical-alpaca_color1.gif"></a> 
             <a href="http://whimsical.heartette.net" target="_blank"><img src="img/adopts/whimsical-cat1a.gif"></a> 
             <a href="http://whimsical.heartette.net" target="_blank"><img src="img/adopts/whimsical-horse2a.gif"></a> 
-            <a href="https://cinni.net/" target="_blank"><img src="img/adopts/cinni-cherry-cat.png"></a> 
             <a href="https://cinni.net/" target="_blank"><img src="img/adopts/cinni-mk05.gif"></a> 
             <a href="https://cinni.net/" target="_blank"><img src="img/adopts/cinni-naranya.png"></a> 
             <a href="https://cinni.net/" target="_blank"><img src="img/adopts/cinni-nnn_peach.png"></a> 
             <a href="https://cinni.net/" target="_blank"><img src="img/adopts/cinni-pen_1.gif"></a> 
             <a href="http://caz.pausedlife.com" target="_blank"><img src="img/adopts/pausedlife-BouncingBubbleKitty.gif"></a> 
             <a href="http://caz.pausedlife.com" target="_blank"><img src="img/adopts/pausedlife-CarnivalBunnyBalloons.gif"></a> 
-            <a href="http://caz.pausedlife.com" target="_blank"><img src="img/adopts/pausedlife-MoonKitty.gif"></a> 
-            <br><br>
+            <a href="http://caz.pausedlife.com" target="_blank"><img src="img/adopts/pausedlife-MoonKitty.gif"></a>
+            <a href="https://vampirevalentine.neocities.org/" target="_blank"><img src="img/adopts/vampirevalentine-lastunicorn.png"></a>
             
             
-            <h3>Stamps</h3>
-             <a href="https://www.deviantart.com/aestheticstamps/art/paw-stamp-586236496" target="_blank"><img src="https://dl.dropboxusercontent.com/s/c3d14qdj3om84hu/aestheticstamps_paw-stamp.png"></a>
-             <a href="https://www.deviantart.com/puniplush/art/Alpacasso-Stamp-614394117" target="_blank"><img src="https://dl.dropboxusercontent.com/s/5j3jmbp6wghksrq/alpcasso_puniplush.png"></a>
-             <a href="https://www.deviantart.com/jousan/art/FREE-Arpakasso-Stamp-354788526" target="_blank"><img src="https://dl.dropboxusercontent.com/s/r5io1mnoch6ddx8/jousan_arpakasso%20stamp.gif"></a>
-             <a href="https://www.deviantart.com/sinnamonstamps/art/pink-clouds-stamp-616002488" target="_blank"><img src="https://dl.dropboxusercontent.com/s/30q59a0ubfxj0gw/sinnamonstamps_pinkclouds.png"></a>
-             <a href="https://www.deviantart.com/martith/art/Heart-goes-on-reupload-663770608" target="_blank"><img src="https://dl.dropboxusercontent.com/s/seu8jpwr02ueegn/martith_heart%20goes%20on.gif"></a>
-             <a href="https://www.deviantart.com/l3xil3in/art/Mew-354413716" target="_blank"><img src="https://dl.dropboxusercontent.com/s/hcd58d41ufd2004/mew_l3xil3in.gif"></a>
-             <a href="https://www.deviantart.com/asthtc/art/046-631908685" target="_blank"><img src="https://dl.dropboxusercontent.com/s/39180r4fw8d7yhw/046-asthtc.png"></a>            
-             <a href="https://www.deviantart.com/snoowva/art/stamp-F2U-pastel-planets-685418744" target="_blank"><img src="https://dl.dropboxusercontent.com/s/ap5093y01pzzj6h/planets_hhgreggcult.png"></a>
-             <a href="https://hhgreggcult.neocities.org" target="_blank"><img src="https://dl.dropboxusercontent.com/s/7lz7uyu4i0tj56t/starstamp_hhgreggcult.gif"></a>   
-             <a href="https://www.deviantart.com/kawaiistamps/art/aesthetic-stamp-711633264" target="_blank"><img src="https://dl.dropboxusercontent.com/s/hrhyik5ry70goj1/kawaiistamps_aesthetic%20stamp.png"></a>
-             <a href="https://www.deviantart.com/aestheticstamps/art/Lights-Stamp-685874105" target="_blank"><img src="https://dl.dropboxusercontent.com/s/12fn3nfy38kgl4f/aestheticstamps_lights-stamp.png"></a>
-             <a href="https://www.deviantart.com/x-end-the-pain-x/art/17-628806862" target="_blank"><img src="https://dl.dropboxusercontent.com/s/wh975n48k16wuvx/fauxfur_endthepain.png"></a>
-             <a href="https://www.deviantart.com/thecandycoating/art/Sparkle-Waterfall-Stamp-636610709" target="_blank"><img src="https://dl.dropboxusercontent.com/s/9ofsgzu7rjvoxd2/sparkle-waterfall_thecandycoating.gif"></a>   
-             <a href="https://www.deviantart.com/x-end-the-pain-x/art/170-629220637" target="_blank"><img src="https://dl.dropboxusercontent.com/s/04jvr7drltfbgsl/170_endthepain.png"></a>
-             <a href="https://www.deviantart.com/puppystamps/art/89-725102682" target="_blank"><img src="https://dl.dropboxusercontent.com/s/11zl9hwup9d1ujw/89_puppystamps.png"></a>
-             <a href="https://www.deviantart.com/molly-stamps/art/check-it-out-669265211" target="_blank"><img src="https://dl.dropboxusercontent.com/s/lf11q8tn6ujjxe5/check-it-out_molly-stamps.png"></a>
-             <img src="https://dl.dropboxusercontent.com/s/ttra1x6l1dq3fbi/tumblr_inline_po4uegDw3b1uabccu_500.gif">
-             <img src="/img/tumblr_423446f4d27f233eaa7e4063185621d4_1a01f074_250.webp">
-             <img src="/img/tumblr_1b629a653ac2a6e2d747f0841d4af825_ed02c270_100.webp">
-             <a href="https://www.deviantart.com/hydropomp/art/Sprkl2-576007958" target="_blank"><img src="https://dl.dropboxusercontent.com/s/xh6p69peiz207q6/sprkl2_hydropump.gif"></a>            
-             <img src="https://dl.dropboxusercontent.com/s/xqd6aqblo8a0cnr/ty5gAJ5.png">            
-             <a href="https://www.deviantart.com/virl0/art/Cant-Sleep-Too-Gay-stamp-675312101" target="_blank"><img src="https://dl.dropboxusercontent.com/s/wqsay4ffpr036f8/cantsleeptoogay_virl0.png"></a> 
-             <a href="https://www.deviantart.com/sunbirds/art/Grey-Asexual-Stamp-580562778" target="_blank"><img src="https://dl.dropboxusercontent.com/s/z9z28eekypkad59/grey-asexual_sunbirds.png"></a> 
+          </span>  
+          <br><br>
+          <img src="img/dolls.png" class="subtitle"><br>
+            <!--DOLLS-->
+            <span class="freezeframe"><a href="https://vampirevalentine.neocities.org/" target="_blank"><img src="img/adopts/vampirevalentine-catdoll.gif"></a>
+            <a href="https://vampirevalentine.neocities.org/" target="_blank"><img src="img/adopts/vampirevalentine-deerdoll.gif"></a>
+            <a href="https://web.archive.org/web/20100417141847/http://www.glittercandybox.com/2010/02/dolls-fairies.html" target="_blank"><img src="img/adopts/glittercandybox_pinkpurple.gif"></a>
+          </span>
+          <br><br>
+
+            <!--STAMPS-->
+            <img src="img/stamps.png" class="subtitle"><br>
+            <span class="freezeframe">
+             <!--pastel-->
+             <a href="https://www.deviantart.com/aestheticstamps" target="_blank"><img src="img/collection/aestheticstamps_paw-stamp.png" title="soft pink paws" alt="pastel pink photo of kitty paws"></a>
+              <a href="https://www.deviantart.com/puniplush" target="_blank"><img src="img/collection/alpcasso_puniplush.png" title="alpacasso dolls" alt="line of alpacasso plushes"></a>
+             <a href="https://www.deviantart.com/jousan" target="_blank"><img src="img/collection/jousan_arpakasso stamp.gif" title="alpacasso face" alt="close up pixel art of alpacasso face"></a>
+             <a href="https://www.deviantart.com/sinnamonstamps" target="_blank"><img src="img/collection/sinnamonstamps_pinkclouds.png" title="pastel pink clouds" alt="pastel pink photos of clouds"></a>
+             <a href="https://www.deviantart.com/martith" target="_blank"><img src="img/collection/martith_heart goes on.gif" title="heart goes on" alt="heart symbol with an animated wave form design"></a>
+             <a href="https://www.deviantart.com/x-end-the-pain-x" target="_blank"><img src="img/collection/7_by_x_end_the_pain_x.png" title="jewel stickers" alt="close up photo of jewel stickers over a pastel pink background"></a>
+             <a href="https://hhgreggcult.neocities.org" target="_blank"><img src="img/collection/starstamp_hhgreggcult.gif" title="animated stars" alt="animated turquoise and yellow stars over a light pink background"></a>
+             <a href="https://www.deviantart.com/snoowva" target="_blank"><img src="img/collection/planets_hhgreggcult.png" title="planets" alt="repeating pattern of pastel planets"></a>
+             <a href="https://www.deviantart.com/asthtc" target="_blank"><img src="img/collection/046-asthtc.png" title="flying cat" alt="white cat flying with a rainbow trail behind it"></a>
+             <a href="https://www.deviantart.com/redkuu" target="_blank"><img src="/img/collection/cd.png" title="cds" alt="close up image of cds"></a>            
+             <a href="https://www.deviantart.com/virus-xenon" target="_blank"><img src="img/collection/pink_sky_7_by_virus_xenon.png" title="blue and purple sky"></a>
+             <a href="https://www.deviantart.com/virus-xenon" target="_blank"><img src="img/collection/pink_sky_8_by_virus_xenon.png" title="pink and purple sky"></a>
+             <a href="https://www.deviantart.com/crypticgoth" target="_blank"><img src="img/collection/020_by_crypticgoth.png" title="crystals"></a>
+             <a href="https://www.deviantart.com/kawaiistamps" target="_blank"><img src="/img/collection/kawaiistamps_aesthetic stamp.png" title="purple stars"></a>
+             <!--wave-->
+             <a href="https://www.deviantart.com/molly-stamps" target="_blank"><img src="img/collection/cherry_pepsi_by_molly_stamps.png" title="purple water"></a>
+             <a href="https://www.deviantart.com/x-end-the-pain-x" target="_blank"><img src="img/collection/78_by_x_end_the_pain_x.png" title="iridescent purple slime"></a>
+             <a href="https://www.deviantart.com/crypticgoth" target="_blank"><img src="img/collection/0148_by_crypticgoth.png" title="purple iridescent liquid"></a>
+             <a href="https://www.deviantart.com/x-end-the-pain-x" target="_blank"><img src="img/collection/135_by_x_end_the_pain_x.png" title="pink purple and blue liquid"></a>
+             <a href="https://www.deviantart.com/virus-xenon" target="_blank"><img src="img/collection/trippy_stamp_1_by_virus_xenon.png" title="colorful liquid swirl"></a>
+             <a href="https://www.deviantart.com/x-end-the-pain-x" target="_blank"><img src="img/collection/109_by_x_end_the_pain_x.png" title="turquoise slime with stars"></a>
+             <a href="https://www.deviantart.com/atroppa-nightshade" target="_blank"><img src="img/collection/fijistamp3_atroppa-nightshade.gif" title="animated blue water"></a>
+             <!--shiny-->
+             <a href="https://toyhou.se/Chot" target="_blank"><img src="img/collection/chot_obscura.png" title="obscura"></a>
+             <a href="https://www.deviantart.com/molly-stamps" target="_blank"><img src="img/collection/get_away_by_molly_stamps.png" title="colorful skates"></a>
+             <!--rainbow-->
+             <a href="https://www.deviantart.com/x-end-the-pain-x" target="_blank"><img src="img/collection/89_by_x_end_the_pain_x.png" title="wavy rainbow lights"></a>
+             <a href="https://www.deviantart.com/aestheticstamps" target="_blank"><img src="img/collection/aestheticstamps_lights-stamp.png" title="rainbow string lights"></a>
+             <img src="img/collection/rainbow-check.webp" title="animated black and neon rainbow checkerboard">
+             <a href="https://toyhou.se/Chot" target="_blank"><img src="img/collection/chot_rainbow.png" title="neon rainbow"></a>
+             <a href="https://www.deviantart.com/crypticgoth" target="_blank"><img src="img/collection/r_by_crypticgoth.png" title="rainbow in the sky"></a>   
+             <a href="https://www.deviantart.com/x-end-the-pain-x" target="_blank"><img src="img/collection/170_endthepain.png" title="abstract rainbow design"></a>
+             <img src="img/collection/trippy.webp" title="animated abstract colorful design">
+             <a href="https://toyhou.se/Chot" target="_blank"><img src="img/collection/chot_slinkies.png" title="rainbow slinkies"></a>
+             <a href="https://toyhou.se/Chot" target="_blank"><img src="img/collection/chot_soda.png" title="ramune"></a>
+             <a href="https://toyhou.se/Chot" target="_blank"><img src="img/collection/chot_fur.png" title="rainbow faux fur"></a>
+             <a href="https://www.deviantart.com/x-end-the-pain-x" target="_blank"><img src="img/collection/fauxfur_endthepain.png" title="colorful faux fur"></a>
+             <a href="https://www.deviantart.com/puppystamps" target="_blank"><img src="img/collection/89_puppystamps.png" title="rainbow spotted faux fur"></a>
+             <a href="https://www.deviantart.com/molly-stamps" target="_blank"><img src="img/collection/here_we_go_by_molly_stamps.png" title="lisa frank"></a>
+             <a href="https://www.deviantart.com/molly-stamps" target="_blank"><img src="img/collection/check-it-out_molly-stamps.png" title="pixel rainbow"></a>
+              <a href="https://www.deviantart.com/thecandycoating" target="_blank"><img src="img/collection/sparkle-waterfall_thecandycoating.gif" title="animated sparkle stars"></a>
+             <!--text-->
+             <img src="/img/collection/iloverainbows.gif" title="i love rainbows"> 
+             <a href="https://www.deviantart.com/hydropomp" target="_blank"><img src="img/collection/sprkl2_hydropump.gif" title="sparkledog pride"></a>
+             <img src="img/collection/ty5gAJ5.png" title="queer">            
+             <a href="https://www.deviantart.com/virl0" target="_blank"><img src="img/collection/cantsleeptoogay_virl0.png" title="can't sleep too gay"></a> 
+             <a href="https://www.deviantart.com/sunbirds" target="_blank"><img src="img/collection/grey-asexual_sunbirds.png" title="gray-asexual" alt="gray-asexual flag with text reading 'gray asexual'"></a> 
+             <a href="https://www.deviantart.com/ashhylemon" target="_blank"><img src="img/collection/asshylemon_genderfluid-stamp.gif" title="genderfluid" alt="animation of the genderfluid flag infinitely scrolling vertically"></a>
+             <a href="https://www.deviantart.com/burntmilk" target="_blank"><img src="img/collection/blacklives_burntmilk.png" title="black lives matter"></a>
+             <img src="img/collection/f3ca4330.png" title="nazis fuck off">
+             <img src="img/collection/dcixdwe-475531ea-0e0e-47df-8fcd-4286ba3fe562.png" title="terfs eat my fat nuts">
+             <a href="https://www.deviantart.com/molly-stamps" target="_blank"><img src="img/collection/some_love_like_yours_by_molly_stamps_da7t0c7-fullview.png" title="leave people you dislike alone"></a>
+             <a href="https://www.deviantart.com/molly-stamps" target="_blank"><img src="img/collection/good_by_molly_stamps_d9tlq90-fullview.png" title="men and women deserve respect"></a>
+             <!--silly :o)-->
+             <a href="https://www.deviantart.com/junidusj" target="_blank"><img src="img/collection/neiltunes_junidusj.png" title="neil banging out the tunes"></a>
+             <a href="https://www.deviantart.com/azianwolfdoll" target="_blank"><img src="img/collection/azianwolfdoll_cursor cat.gif" title="cat watching cursor"></a>
+             <!--interests-->
+             <a href="https://www.deviantart.com/jems-resources" target="_blank"><img src="img/collection/b38f6aef.png" title="OK KO"></a>
+             <a href="https://www.deviantart.com/virus-xenon" target="_blank"><img src="img/collection/steven_universe_future_stamp_by_virus_xenon.png" title="Steven Universe Future"></a>
+             <a href="https://www.deviantart.com/eumoirousdesires" target="_blank"><img src="img/collection/59_eumoirousdesires.gif" title="puppycat"></a>
+             <a href="https://www.deviantart.com/i-psofacto" target="_blank"><img src="img/collection/spiritphone_i-psofacto.png" title="Spirit Phone"></a>
+             <a href="https://www.deviantart.com/houkypokey" target="_blank"><img src="img/collection/sakana_houkypokey.png" title="Sakana comic"></a>
+             <a href="https://www.deviantart.com/skymint-stamps" target="_blank"><img src="img/collection/vaporeonfan_skymint-stamps.png" title="vaporeon" ></a>             
+             <a href="https://www.deviantart.com/s-laughtur" target="_blank"><img src="img/collection/S-laughtur_sylveon.png" title="sylveon"></a>
+             <a href="https://www.deviantart.com/puniplush" target="_blank"><img src="img/collection/PuniPlush_smiling sylveon.gif" title="animated pastel sylveon"></a>
+             <a href="https://www.deviantart.com/l3xil3in" target="_blank"><img src="img/collection/mew_l3xil3in.gif" title="animated mew"></a>
+             <a href="https://www.deviantart.com/yenshin" target="_blank"><img src="img/collection/yenshin_cute pokemon.png" title="I use cute pokemon"></a>
              
-             <a href="https://www.deviantart.com/burntmilk/art/Black-Lives-Stamp-538563965" target="_blank"><img src="https://dl.dropboxusercontent.com/s/wburzvt35cj515e/blacklives_burntmilk.png"></a>
-             <img src="https://dl.dropboxusercontent.com/s/uqzgh69ui8bhmle/f3ca4330.png">
-             <img src="https://dl.dropboxusercontent.com/s/6mv1irnys653zbb/dcixdwe-475531ea-0e0e-47df-8fcd-4286ba3fe562.png">
-             
-             <a href="https://www.deviantart.com/junidusj/art/neil-banging-out-the-tunes-f2u-709228615" target="_blank"><img src="https://dl.dropboxusercontent.com/s/f5ocq04uuoep0kt/neiltunes_junidusj.png"></a>
-             <a href="https://www.deviantart.com/azianwolfdoll/art/Cursor-Cat-185083895" target="_blank"><img src="https://dl.dropboxusercontent.com/s/8ryf9vv71ivlgr8/azianwolfdoll_cursor%20cat.gif"></a>
-             <a href="https://www.deviantart.com/jems-resources/art/ok-ko-stamp-logo-753273728" target="_blank"><img src="https://dl.dropboxusercontent.com/s/5k7zlzhawcggmui/b38f6aef.png"></a>
-             <a href="https://www.deviantart.com/i-psofacto/art/Lemon-Demon-Spirit-Phone-stamp-805051846" target="_blank"><img src="https://dl.dropboxusercontent.com/s/jhs0sfx7ddb3p50/spiritphone_i-psofacto.png"></a>
-             <a href="https://www.deviantart.com/houkypokey/art/Sakana-Stamp-657408313" target="_blank"><img src="https://dl.dropboxusercontent.com/s/fmn9vm6hvqi0mhi/sakana_houkypokey.png"></a>
-             <a href="https://www.deviantart.com/skymint-stamps/art/Vaporeon-Fan-Stamp-375894389" target="_blank"><img src="https://dl.dropboxusercontent.com/s/120i30fsslb3l9y/vaporeonfan_skymint-stamps.png"></a>             
-             <a href="https://www.deviantart.com/s-laughtur/art/Sylveon-stamp-354536205" target="_blank"><img src="https://dl.dropboxusercontent.com/s/cu4d4xent05x29v/S-laughtur_sylveon.png"></a>
-             <a href="https://www.deviantart.com/puniplush/art/Smiling-Sylveon-Stamp-625908846" target="_blank"><img src="https://dl.dropboxusercontent.com/s/44awoij6i0sgy25/PuniPlush_smiling%20sylveon.gif"></a>
-             <a href="https://www.deviantart.com/yenshin/art/Cute-Pokemon-Stamp-151342088" target="_blank"><img src="https://dl.dropboxusercontent.com/s/b90su6o0hxotcmx/yenshin_cute%20pokemon.png"></a>
-             <a href="https://www.deviantart.com/eumoirousdesires/art/59-679894201" target="_blank"><img src="https://dl.dropboxusercontent.com/s/x3fz73r9lptklr2/59_eumoirousdesires.gif"></a>
+             </span>
              <br><br>
-             
-             <h3>Blinkies</h3>
-             <a href="https://cinni.net/" target="_blank"><img src="img/gaypride3.gif"></a>
-             <a href="https://cinni.net/" target="_blank"><img src="img/gayrights.gif"></a>
-             <a href="https://cinni.net/" target="_blank"><img src="img/trnsrits.gif"></a>
-             <a href="https://blinkies.neocities.org/index.html" target="_blank"><img src="img/0161-genderqueer_blinkies.gif"></a>
-             <a href="https://cinni.net/" target="_blank"><img src="img/pink1.gif"></a>
-             <a href="https://cinni.net/" target="_blank"><img src="img/bed.gif"></a>
-             <a href="https://pinkukingdom.neocities.org/" target="_blank"><img src="img/pi14_pinkukingdom.gif"></a>
-             <a href="https://blinkies.neocities.org/" target="_blank"><img src="img/0019-candy.gif"></a>
-             <a href="https://blinkies.neocities.org/" target="_blank"><img src="img/0110-yeah.gif"></a>
-             <a href="https://blinkies.neocities.org/" target="_blank"><img src="img/0136-clock.gif"></a>
-             <a href="https://hhgreggcult.neocities.org/" target="_blank"><img src="img/lemondemon_hhgreggcult.gif"></a><a href="https://hhgreggcult.neocities.org/" target="_blank"><img src="img/online_hhgreggcult.gif"></a>
-            
+             <!--BLINKIES-->
+             <img src="img/blinkies.png" class="subtitle"><br>
+             <span class="freezeframe"><a href="https://cinni.net/" target="_blank"><img src="img/collection/gaypride3.gif" title="Gay Pride"></a>
+             <a href="https://cinni.net/" target="_blank"><img src="img/collection/gayrights.gif" title="Gay rights"></a>
+             <a href="https://cinni.net/" target="_blank"><img src="img/collection/trnsrits.gif" title="Trans Rights"></a>
+             <a href="https://blinkies.neocities.org/index.html" target="_blank"><img src="img/collection/0161-genderqueer_blinkies.gif" title="genderqueer pride"></a>
+             <a href="https://toyhou.se/Chot" target="_blank"><img src="img/collection/chot_sheher.gif" title="she/her"></a>
+             <a href="https://toyhou.se/Chot" target="_blank"><img src="img/collection/chot_theythem.gif" title="they/them"></a>
+             <img src="img/collection/blinkt.gif" title="no terfs on my turf">
+             <a href="https://cinni.net/" target="_blank"><img src="img/collection/pink1.gif" title="I love cats"></a>
+             <img src="img/collection/blinky1.gif" title="I'm a cat person"> 
+             <img src="img/collection/cat.gif" title="a house is not a home without a cat">
+             <a href="https://cinni.net/" target="_blank"><img src="img/collection/bed.gif" title="no place like my bed"></a>
+             <a href="https://pinkukingdom.neocities.org/" target="_blank"><img src="img/collection/pi14_pinkukingdom.gif" title="I love pink"></a>
+             <a href="https://blinkies.neocities.org/" target="_blank"><img src="img/collection/0019-candy.gif" title="sweet tooth"></a>
+             <a href="https://blinkies.neocities.org/" target="_blank"><img src="img/collection/0110-yeah.gif" title="social anxiety"></a>
+             <a href="https://blinkies.neocities.org/" target="_blank"><img src="img/collection/0136-clock.gif" title="time blind"></a>
+             <a href="https://hhgreggcult.neocities.org/" target="_blank"><img src="img/collection/online_hhgreggcult.gif" title="HELP"></a>
+             <img src="img/collection/bornmild.gif" title="born mild">
+             <a href="https://hhgreggcult.neocities.org/" target="_blank"><img src="img/collection/lemondemon_hhgreggcult.gif" title="lemon demon"></a>
+             <a href="https://felinewasteland.tumblr.com/" target="_blank"><img src="img/collection/felinewasteland-chao.gif" title="I love chao"></a>
+             <a href="https://felinewasteland.tumblr.com/" target="_blank"><img src="img/collection/felinewasteland-chneutral.gif" title="I love neutral chao"></a>
+             <a href="https://felinewasteland.tumblr.com/" target="_blank"><img src="img/collection/felinewasteland-chero.gif" title="I love hero chao"></a>
+             <a href="https://felinewasteland.tumblr.com/" target="_blank"><img src="img/collection/felinewasteland-chdark.gif" title="I love dark chao"></a>
+             <a href="https://toyhou.se/Chot" target="_blank"><img src="img/collection/chot_eyestrain.gif" title="eyestrain luvr"></a>
+            </span>
           </div>
         </div>
             <footer></footer>
           </div>
    </div>
+   <script>
+    const manual = new Freezeframe('.freezeframe', {
+  trigger: false
+});
+
+document
+  .querySelector('#start')
+  .addEventListener('click', () => {
+    manual.start();
+  });
+
+document
+  .querySelector('#stop')
+  .addEventListener('click', () => {
+    manual.stop();
+  });
+   </script>
   </body>
 </html>
