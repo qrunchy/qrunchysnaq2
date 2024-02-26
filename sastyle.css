@@ -1,0 +1,254 @@
+html {
+    height: 100%;
+}
+
+@font-face {
+    font-family: NiseSegaSonic;
+    src: url(fonts/NiseSegaSonic.TTF);
+}
+
+
+body {
+    background-image: url(img/sashrine/pool-night.png);
+    background-attachment: fixed;
+}
+
+body a {
+    color: #7f43df;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    font-size: 18px;
+    text-align: center;
+    font-family: NiseSegaSonic;
+}
+
+header img {
+    max-width: 100%;
+    
+}
+
+.content {
+    background-color: white;
+    background-image: url(img/sashrine/waterbg-edit.jpg);
+    height: 1fr;
+    padding: 10px;
+
+}
+
+.content h2{
+    font-family: NiseSegaSonic;
+    color: #001d6e;
+}
+
+.pics {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.pics img {
+    height: 230px;
+    padding: 5px;
+}
+
+.caption {
+    text-align: center;
+    font-family: 'Gill Sans';
+}
+
+.embed {
+    display: block;
+    text-align: center;
+}
+
+.art {
+    display: block;
+    text-align: center;
+    overflow-y: scroll;
+    height: 400px;
+    padding: 5px;
+    
+}
+
+.art img {
+    height: 150px;
+    padding: 5px;
+}
+
+/*phone version*/
+@media (max-width: 700px) {
+    #box {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
+    
+    nav {
+        background-color: white;
+        background-image: url(img/sashrine/waterbg-edit.jpg);
+        height: fit-content;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-radius: 10px;
+        border-style: solid;
+        border-width: 3px;
+        border-color:#328ad1;
+    }
+    
+    #container {
+        margin: auto;
+        border-left-style: solid;
+        border-left-width: 4px;
+        border-left-color:#328ad1;
+        border-right-style: solid;
+        border-right-width: 4px;
+        border-right-color:#328ad1;
+    }
+    
+    .content p {
+        text-align: left;
+        background: rgba(255, 255, 255, 0.75);
+        border-radius: 10px;
+        padding: 10px;
+        margin: auto;
+        font-family: 'Gill Sans';
+        
+    }
+    
+    .imager {
+        display: block;
+        padding: 10px;
+        text-align: center; 
+        font-size: 14px;
+        max-width: 250px;
+        margin: auto;
+    }
+    
+    .imager img {
+        max-width: 250px;
+    }
+
+    .imagel {
+        display: block;
+        padding: 10px;
+        text-align: center; 
+        font-size: 14px;
+        margin: auto;
+    }
+
+    .imagel img {
+        max-width: 250px;
+    }
+
+    footer {
+        height:fit-content;
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+/*pc version*/
+@media (min-width: 700px) {
+#box {
+    width: 70%;
+    margin: auto;
+    display: grid;
+    grid-column-gap: 10px;
+    align-items: center;
+    grid-template-columns: auto, 65%;
+    grid-template-rows: auto;
+    align-items: start;
+}
+
+header {
+    grid-column: 2/3;
+    height: fit-content;
+}
+
+nav {
+    background-color: white;
+    background-image: url(img/sashrine/waterbg-edit.jpg);
+    grid-column: 1/2;
+    width: fit-content;
+    height: fit-content;
+    position: sticky;
+    top: 300px;
+
+    padding: 20px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-color:#328ad1;
+}
+
+#container {
+    margin: auto;
+    grid-column: 2/3;
+    border-left-style: solid;
+    border-left-width: 4px;
+    border-left-color:#328ad1;
+    border-right-style: solid;
+    border-right-width: 4px;
+    border-right-color:#328ad1;
+}
+
+.content p {
+    text-align: left;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    width: 95%;
+    margin: auto;
+    font-family: 'Gill Sans';
+}
+
+.content h2{
+    font-family: NiseSegaSonic;
+    color: #001d6e;
+}
+
+.pics {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.pics img {
+    height: 230px;
+    padding: 5px;
+}
+
+.caption {
+    text-align: center;
+    font-family: 'Gill Sans';
+}
+
+.imager {
+    float: right;
+    width: 300px;
+    padding: 10px;
+}
+
+.imagel {
+    float: left;
+    padding: 10px;
+    text-align: center; 
+    font-size: 14px; 
+}
+
+footer {
+    grid-column: 2/3;
+    height:fit-content;
+    text-align: center;
+    padding: 10px;
+}
+
+}

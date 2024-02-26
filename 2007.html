@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2007</title>
+<link rel="icon" type="image/x-icon" href="img/cdfavicon.ico">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="simple-lightbox.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="load.js"></script>
+<script type="text/javascript" src="cursor.js"></script> 
+  </head>
+  <body>
+    <div id="box">
+        <header></header> 
+        <nav></nav> 
+        <div id="border">
+            <img src="img/dolphin.png" id="tldecor" alt="decorative dolphin facing left">
+          <img src="img/dolphin.png" id="trdecor" alt="decorative dolphin facing right">
+          <div id="container">
+          <div id="pagecontent" tabindex="0">
+            <div id="top"></div>
+            <p><a href="art.html">Art</a> | <a href="archive.html">Archive</a><br>
+              <div id="archnav"></div>
+              <a href="#fin">Finished work</a> | <a href="#rough">Rough work</a> | <a href="#exp">Experimental Stuff</a>
+              <h3><img src="img/2007.png" class="subtitle1"></h3>
+              <p>I think this was by far the most prolific time of my life. I peaked in 2007. By then I had mostly moved on from Lion King fan art and got very interested in my own OCs again. I hung out on Suta-Raito a lot and got into oekaki for a bit.I also started being more uh, ~openly religious~ in my art. There's some Christian stuff here and there, but nothing too crazy. Mostly just like, crosses and shit. I am no longer religious so this is funny and kinda cringe to look back on.</p>
+              <p>I also became briefly interested in more abstract art, making weird colorful things in photoshop and playing around with fractal art.</p>
+              <br><br>
+              <h2><img src="img/finishedwork.png" class="subtitle" id="fin" alt="Finished Work"></h2>
+            <div id="gallery1">
+              <a v-bind:href="'art/07/'+image.src" v-for="image in images">
+                <img v-bind:src="'art/07/thumbs/'+image.src" :alt="image.alt" :title="image.title" :key="image"/>
+              </a>
+            </div>
+            <a href="#top">Back to top</a><br><br>
+            <h2><img src="img/roughwork.png" class="subtitle" id="rough" alt="Rough Work"></h2>
+            <div id="gallery2">
+              <a v-bind:href="'art/07/rough/'+image.src" v-for="image in images">
+                <img v-bind:src="'art/07/rough/thumbs/'+image.src" :alt="image.alt" :title="image.title" :key="image"/></a>
+            </div>
+            <a href="#top">Back to top</a>
+            <br><br>
+            <img src="img/experimental.png" class="subtitle" id="exp"><br>
+            <div id="gallery3">
+              <a v-bind:href="'art/07/exp/'+image.src" v-for="image in images">
+                <img v-bind:src="'art/07/exp/thumbs/'+image.src" :alt="image.alt" :title="image.title" :key="image"/></a>
+            </div>
+            <a href="#top">Back to top</a>
+          </div>
+            </div>
+            <footer></footer>
+        </div>
+   </div>
+  </body>
+  <script>
+    const { createApp } = Vue
+    createApp({
+      data() {
+        return {
+          images: [{src:"01_01-01Introduction.jpg"},{src:"01_02-02Love.png"},{src:"01_02-03Light.jpg"},{src:"01_02-04Dark.jpg"},{src:"01_02-05SeekingSolace.jpg"},{src:"01_06Anguloke.png"},{src:"01_10ChesterDaCheetah.jpg"},{src:"01_10Title.jpg"},{src:"01_27Rawr.png"},{src:"02_09MauraMauraBoBaura.jpg"},{src:"03_02SomethingThatIsNOTMali.png"},{src:"03_05MauraFullBody.jpg"},{src:"03_24FinalDesign.jpg"},{src:"04_28BrainCancer.png"},{src:"04_28ICU.png"},{src:"05_16SameBatChannel.jpg"},{src:"05_17Uh.jpg"},{src:"05_21Milo.png"},{src:"05_25c8.jpg"},{src:"05_25Finally.png"},{src:"05_30NotExactlyAPainting.png"},{src:"05_31CraaaazyDaaaaiiiisyy.jpg"},{src:"06_01LoveLoveLove.jpg"},{src:"06_05BoooorrrnnnFrrreeeee.png"},{src:"06_05skwawk.jpg"},{src:"06_15spin_it_again.png"},{src:"06_23bird_pet.png"},{src:"06_25another_pet_thing.png"},{src:"07_12because_of_yooooooooouuuuu.png"},{src:"07_12lightsources_r_phun.png"},{src:"07_12sillhouette_thing.png"},{src:"07_24id_v_3-edit.png"},{src:"07_24mali_ref_outdated.jpg"},{src:"07_26aliem.jpg"},{src:"07_29insert_windy_noise_here.png"},{src:"07_29o0o.png"},{src:"08_02you_are_a_rainbow_staaarrrr.jpg"},{src:"08_04under_the_shade_of_the_trees.jpg"},{src:"08_14and_i_ll_kick_her__sir.jpg"},{src:"08_14my_dog_found_the_chainsaw.jpg"},{src:"08_17my_hair_isn_t_naturally_blue.jpg"},{src:"08_17wut_r_u_lukin_at.jpg"},{src:"08_18das_kwl.jpg"},{src:"08_28cant_touch_dis.png"},{src:"09_08t_e_c_h_n_i_c_o_l_o_r.jpg"},{src:"09_13slip_n_slide_fun.jpg"},{src:"09_14hey_kids.jpg"},{src:"10_26royal_pain.jpg"},{src:"10_28old_character___shirah.jpg"},{src:"11_16she_will_kill_you.jpg"},{src:"11_30stroll.jpg"},{src:"12_25seasons_greetings.jpg"}]
+        }
+      }
+    }).mount('#gallery1')
+
+    createApp({
+      data() {
+        return {
+          images: [{src:"01_02MaliDoodle.jpg"},{src:"01_06FluffyHeadSyndrome.jpg"},{src:"01_06LooksLikeASquirrel.jpg"},{src:"01_07CCAdultLion.jpg"},{src:"01_07CCTeenageLion.jpg"},{src:"01_27HAYYOOGUYSSS.png"},{src:"02_01BinderCoverThing.jpg"},{src:"02_24HazeltheUglyUnicorn.png"},{src:"03_02arrrooooooowww.png"},{src:"03_02CLICHE-ALERT.png"},{src:"03_02LookToTheStaarrrssss.png"},{src:"03_02MauraAndRita.png"},{src:"03_02Ouch.png"},{src:"03_02PlayfulPup.png"},{src:"03_02SleepySleep.png"},{src:"03_02Srry4TehSpamDump.png"},{src:"03_02TobyyyyyyyMutt.png"},{src:"03_25what.png"},{src:"03_30BuhNaNa.jpg"},{src:"03_30HayLuk.jpg"},{src:"03_31BananaNLemon.jpg"},{src:"04_12DailyChores.jpg"},{src:"04_13DontStopMeNowwww.jpg"},{src:"04_13Three-Fo.jpg"},{src:"05_12OekakiDump.png"},{src:"05_15ID.png"},{src:"05_15ZorroSketch.jpg"},{src:"05_18adkfalsg.jpg"},{src:"05_18DumpContd.jpg"},{src:"05_18KuhKuhKuuuhhhh.jpg"},{src:"05_18RaccoonsRUFrnds.jpg"},{src:"05_18SchoolDewdles.jpg"},{src:"05_22CatCharactersssssFemales.jpg"},{src:"05_22eeeheewaaoooooww.png"},{src:"05_22MaleCharactersCats.jpg"},{src:"05_22radical.png"},{src:"05_23NewIdTime.jpg"},{src:"05_23SummuhTime.png"},{src:"05_30DoopDeeDoo.png"},{src:"05_30MoreHumanPractice.jpg"},{src:"05_31SunshineAndSummertime.jpg"},{src:"06_06hay_wut_is.png"},{src:"06_08i_can_explain.png"},{src:"06_14time_for_a_little_variety.jpg"},{src:"06_23campfire_song.png"},{src:"06_23everybody_s_doing_it.jpg"},{src:"06_27manual_labor.png"},{src:"06_27you_re_my_best_friend.png"},{src:"07_24OINKOINK.jpg"},{src:"07_26gripe_gripe_gripe.jpg"},{src:"07_26hey_mr_dee_jaaayy.png"},{src:"07_26huh.jpg"},{src:"07_26more_dunburrs.jpg"},{src:"07_26rita_is_a_disembodied_head.jpg"},{src:"07_26sketchy_dunburr_ref.jpg"},{src:"07_26skullzz.png"},{src:"07_26we_bring_froot.png"},{src:"07_26yay_yah.png"},{src:"07_27african_wild_dog.jpg"},{src:"08_06maura_reference_sketch.jpg"},{src:"08_13this_can_only_end_in_tears.jpg"},{src:"09_09slip_n_slide.png"},{src:"09_12engrish_tiemz.jpg"},{src:"09_12estoy_listo__estoy_listo.jpg"},{src:"09_12its_math.jpg"},{src:"09_12uh_ran_out_of_clever_titles.jpg"},{src:"09_12youll_go_down_in_hiiistoorryyy.jpg"},{src:"10_13tiger_tiger_tiger.png"},{src:"10_19bad_pun_bad_pun.png"},{src:"10_27mali_quickie.png"},{src:"10_31kittens.png"},{src:"11_16ka_chow.jpg"},{src:"11_16mali_ref_rough_outdated.jpg"},{src:"11_27bloo_jayssss.jpg"},{src:"11_29comfort_zone.jpg"},{src:"11_29ty_the_jay.jpg"},{src:"12_01death_finch.jpg"},{src:"12_01this_is_disgusting.jpg"},{src:"12_01umwut.jpg"},{src:"12_07aaauuuugghhhh.jpg"},{src:"12_07what_is_that_thing.jpg"}]
+        }
+      }
+    }).mount('#gallery2')
+
+    createApp({
+      data() {
+        return {
+          images: [{src:"01_20ColorMadnessWallpaper.jpg"},{src:"01_20SwirlyWallpaper.jpg"},{src:"01_26AnotherWallpaper.png"},{src:"02_15NightSky.png"},{src:"02_16CrystalCity.png"},{src:"03_05Reflection.png"},{src:"04_15StringTheory.jpg"},{src:"04_17Lol.jpg"},{src:"04_18Woo.jpg"},{src:"04_20AmongDaFettuhs.jpg"},{src:"04_29Starburst.png"},{src:"04_30Butterflies.png"},{src:"05_15WereNotGonnaTakeIt.png"},{src:"06_09heeeeeeeeeeeeeeeee.png"},{src:"07_25cloud_stuff.png"},{src:"11_06maybe_maybe_not.jpg"}]
+        }
+      }
+    }).mount('#gallery3')
+    
+  </script>
+  <script>
+    (function() {
+    var $gallery = new SimpleLightbox('#gallery1 a', {});
+    var $gallery = new SimpleLightbox('#gallery2 a', {});
+    var $gallery = new SimpleLightbox('#gallery3 a', {});
+    })();
+  </script>
+</html>

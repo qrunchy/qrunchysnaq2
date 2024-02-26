@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2006</title>
+<link rel="icon" type="image/x-icon" href="img/cdfavicon.ico">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="simple-lightbox.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="load.js"></script>
+<script type="text/javascript" src="cursor.js"></script> 
+  </head>
+  <body>
+    <div id="box">
+        <header></header> 
+        <nav></nav> 
+        <div id="border">
+            <img src="img/dolphin.png" id="tldecor" alt="decorative dolphin facing left">
+          <img src="img/dolphin.png" id="trdecor" alt="decorative dolphin facing right">
+          <div id="container">
+          <div id="pagecontent" tabindex="0">
+            <div id="top"></div>
+            <p><a href="art.html">Art</a> | <a href="archive.html">Archive</a><br>
+              <div id="archnav"></div>
+              <a href="#fin">Finished work</a> | <a href="#rough">Rough work</a>
+              <h3><img src="img/2006.png" class="subtitle1"></h3>
+              Still pulling mostly from TLKFAA for this page. Fortunately I posted a lot to that site back in the day. The downside is it was almost exclusively my Lion King art lol.
+I spent a lot of time on ArtGrounds this year, which was a site with a browser-based shared drawing canvas applet called Sketcher. Most characters depicted are from my OC lion pride. There's a lot of them. <br><br>
+            <h2><img src="img/finishedwork.png" class="subtitle" id="fin" alt="Finished Work"></h2>
+            <div id="gallery1">
+              <a v-bind:href="'art/06/'+image.src" v-for="image in images">
+                <img v-bind:src="'art/06/thumbs/'+image.src" :alt="image.alt" :title="image.title" :key="image"/>
+              </a>
+            </div>
+            <a href="#top">Back to top</a><br><br>
+            <h2><img src="img/roughwork.png" class="subtitle" id="rough" alt="Rough Work"></h2>
+            <div id="gallery2">
+              <a v-bind:href="'art/06/'+image.src" v-for="image in images">
+                <img v-bind:src="'art/06/thumbs/'+image.src" :alt="image.alt" :title="image.title" :key="image"/></a>
+            </div>
+            <a href="#top">Back to top</a>
+          </div>
+            </div>
+            <footer></footer>
+        </div>
+   </div>
+  </body>
+  <script>
+    const { createApp } = Vue
+    createApp({
+      data() {
+        return {
+          images: [{src:"01_13JazzOnBack.png"},{src:"01_15Amina.png"},{src:"01_17Ayani.png"},{src:"02_25ThankYouBrian.jpg"},{src:"02_27AshantiStrut.jpg"},{src:"03_13JackieFinished.jpg"},{src:"04_21JazzMoon.jpg"},{src:"05_24MystikkAdoptableFin.jpg"},{src:"05_26SiameseLion.jpg"},{src:"05_29LionesGasp.jpg"},{src:"06_01Jack.jpg"},{src:"06_02JackandJackieFinished.jpg"},{src:"06_03AelinGift.jpg"},{src:"06_12DestaFinished.jpg"},{src:"06_28AtoBust.jpg"},{src:"06_30AyaniWeirdBG.jpg"},{src:"11_11GothicKittahRequestSmaller.jpg"},{src:"12_xxSleepyMali.png"}]
+        }
+      }
+    }).mount('#gallery1')
+
+    createApp({
+      data() {
+        return {
+          images: [{src:"01_14JazzPinkMonochrome.png"},{src:"01_20SketcherNadifa.png"},{src:"01_22Yusufu.jpg"},{src:"02_17JazNeverToBeFinished.png"},{src:"02_17KiambuDoodle.png"},{src:"02_18JazzNAbbyy.jpg"},{src:"03_13JackieWIP.jpg"},{src:"03_13JazzPlayFinished.jpg"},{src:"03_13JackieSketch.jpg"},{src:"03_14JackPaintChat.jpg"},{src:"04_17AshantiSketches.jpg"},{src:"06_17TLKSketchesForTLKFAA.png"},{src:"06_18LionCharaSketches2.jpg"},{src:"12_xx-itz_itz_ballroom_blitz.jpg"},{src:"12_xx-is_dis_fr_srs.jpg"},{src:"12_xx-more_colored_pencil.jpg"},{src:"12_xx-wut_do_u_thnk_ur_doin.jpg"},{src:"lawl.jpg"},{src:"osnp.jpg"}]
+        }
+      }
+    }).mount('#gallery2')
+    
+  </script>
+  <script>
+    (function() {
+    var $gallery = new SimpleLightbox('#gallery1 a', {});
+    var $gallery = new SimpleLightbox('#gallery2 a', {});
+    })();
+  </script>
+</html>

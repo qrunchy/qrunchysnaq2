@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art</title>
+    <link rel="icon" type="image/x-icon" href="img/cdfavicon.ico">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="simple-lightbox.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="load.js"></script>
+<script type="text/javascript" src="cursor.js"></script>
+    </head>
+
+  <body>
+    <div id="box">
+        <header></header> 
+        <nav></nav> 
+        <div id="border">
+            <img src="img/dolphin.png" id="tldecor" alt="decorative dolphin facing left">
+          <img src="img/dolphin.png" id="trdecor" alt="decorative dolphin facing right">
+          <div id="container">   
+          <div id="pagecontent" tabindex="0">
+            <div id="top"></div>
+            <p>Art | <a href="archive.html">Archive</a><br>
+              <a href="#fin">Finished work</a> | <a href="#rough">Rough work</a>
+              <h1><img src="img/title-art.png" class="subtitle1" alt="Art"></h1>
+                My current work from this year, newest to oldest.
+                Previous years can be found in the archive section.<br><br>
+                <h2><img src="img/finishedwork.png" class="subtitle" id="fin" alt="Finished Work"></h2>
+            <div id="gallery1">
+              <a v-bind:href="'art/'+image.src" v-for="image in images">
+                <img v-bind:src="'art/thumbs/'+image.src" :alt="image.alt" :title="image.title" :key="image"/>
+              </a><br>
+            </div>
+            <a href="#top">Back to top</a><br><br>
+            <h2><img src="img/roughwork.png" class="subtitle" id="rough" alt="Rough Work"></h2>
+            <div id="gallery2">
+              <a v-bind:href="'art/'+image.src" v-for="image in images">
+                <img v-bind:src="'art/thumbs/'+image.src" :alt="image.alt" :title="image.title" :key="image"/></a><br>
+            </div>
+            <a href="#top">Back to top</a><br>
+          </div>
+            </div>
+            <footer></footer>
+        </div>
+   </div>
+  </body>
+  <script>
+    const { createApp } = Vue
+    createApp({
+      data() {
+        return {
+          images: [{src:"23_12_09zaph2-sm.png", title:"Zaph, my other zora guard OC.", alt:"digital art of a slender blue male Breath of the Wild style zora with lobster-like features."},{src:"23_12_09zaph1.png", title:"Full body design for Zaph, my zora guard OC.", alt:"digital art. Full body drawing of a slender blue male Breath of the Wild style zora with lobster-like features."},{src:"23_12_04biza2_sm.png", title:"Biza the zora guard looking casual in civilian garb.", alt:"digital art. Three-quarter view of a curvy, purple female Breath of the Wild style zora with orca-like features in a casual pose"},{src:"23_12_03biza_sm.png", title:"Biza, one of my zora guard OCs", alt:"digital art. Full body profile view of a curvy, purple female Breath of the Wild style zora with orca-like features."},{src:"23_11_30azem.png", title:"Initial design concept for my take on Azem from FFXIV.", alt:"digital portrait of a fat feminine man with pastel pink hair and blond highlights. He has bright green eyes and a white robe."},{src:"23_11_26festivalcat_sm.png", title:"My new OC Taffy's anthro design. Best suited for running around music festivals and giving out the kandi she makes.", alt:"digital art of an ambiguous white anthro feline with rainbow spots, a tuft of rainbow hair on her head, and big fluffy wings. She's decked out in a holographic bikini top and miniskirt, colorful kandi jewelry and hair accessories."},{src:"23_11_18sparklecat_sm.png", title:"A new OC, Taffy, who loves music and going to festivals. This is her feral form.", alt:"digital art of an ambiguous white quadripedal feline with rainbow spots, a tuft of rainbow hair on her head, and big fluffy wings. She's decked out in colorful kandi jewelry and hair accessories."},{src:"23_10_21kava_sm.png", title:"One of my most recent alts in Guild Wars 2, Kava Beastcaller the ranger.", alt:"digital art portrait of a charr from guild wars 2 with straight brown hair and a siamese cat-like face."},{src:"23_10_07merthing_sm.png", title:"Wanted to design a tropical mercat critter", alt:"digital art of toony pink anthro feline creature with a turquoise mermaid tail"},{src:"23_10_04spikehorns_sm.png", title:"Wanted to try lime green horns on hellhound Spike", alt:"digital portrait of a black haired dog girl with lime green demon horns"},{src:"23_10_03mariel_sm.png", title:"I drew my middle school Furcadia RP character for cringetober", alt:"digital art of a white anthro cat girl with blonde hair and purple stripes. She has large white, pink, and blue wings and a pink jewel in her forehead."},{src:"23_09_27spike-pubby_sm.jpg", title:"design concept for Spike's base form", alt:"Digital art of a toony dark purple puppy with lime green horns. She has lighter purple minpin-like markings and a big sharp toothed grin."},
+          {src:"23_09_26spike-sm.jpg", title:"design concept for Lila's gf, Spike. She's a hellhound", alt:"Digital art of a black haired dog girl in colorful 2000s fashion"},{src:"23_09_16lilafly.png", title:"Lila drawing done on SweetCharm Oekaki"},{src:"23_09_09guardian2_sm.png", title:"Text on image: 'Lila is an ethereal digital being formed of pure inspiration. She has developed skills from her dreams and goals until she gained the ability to transform into a more advanced form'"},{src:"23_09_04lilaforms-mid_sm.png", title:"Lila's pixie form, for traveling and creating things"}, {src:"23_08_17lilawebgarden_sm.png", title:"Lila art for my webgarden"},{src:"23_08_05vapeerling_sm.png"},{src:"23_08_01jett_sm.png"},{src:"23_07_15twinkie_sm.png", title:"Art Fight 2023 attack on Raystarchus. Her OC Twinkie."},{src:"23_07_10quiflex_sm.png", title:"Art Fight 2023 attack on Quiflex"},{src:"23_07_08mosscyrus_sm.png", title:"Art Fight 2023 attack on Cultspawn. His OCs Cyrus and Moss."},{src:"23_07_08mrl.png", title: "me lol"},{src:"23_07_05peony_sm.png", title:"Art Fight 2023 attack on Satorlrosecat. Their fursona Peony."},{src:"23_07_04ruiqui_sm.png", title:"Art Fight 2023 attack on CopperFirebird. His OC Ruiqui."},{src:"23_07_01miyukuna_sm.png", title:"Art Fight 2023 attack on Sheiya. Her OC Miyukuna."},{src:"23_06_28atollabust-edit.png"},{src:"23_06_28atollaref2.png"},{src:"23_06_24mayheadport.png"},{src:"23_06_24bridget_sm.png"},{src:"23_06_21beeref2_sm.png"},{src:"23_06_17valence.png"},{src:"23_06_13chibi-sm.png"},{src:"23_04_19cabbit_sm.png"},{src:"23_04_10rubychibifur-recolor_sm.png"},{src:"23_04_05newruby_sm.png"},{src:"23_03_27atollabust-sm.png"},{src:"23_03_14rubychibifur-sm.png"},{src:"23_02_26dusty_sm.png"},{src:"23_02_16bridget-lounge_sm.png"},{src:"23_02_11qrunchy_badge-crop.png"},{src:"23_02_10snowleopard.png"},{src:"23_02_10maycolor.png"},{src:"23_01_29merleport_sm.png"},{src:"23_01_28dez_cr.png"},{src:"23_01_23beepose_sm.png"},{src:"21_12_05lilskeef-doll-color.png"},{src:"01_04dncskeef-color_sm.png"},{src:"01_04dncskeef_sm.png"}]
+        }
+      }
+    }).mount('#gallery1')
+
+    createApp({
+      data() {
+        return {
+          images: [{src:"23_10_22kavaref-sm.png", title:"Working out Kava's full body design", alt:"digital full body drawing of a charr from guild wars 2 with straight brown hair and siamese cat-like coloration."},{src:"23_09_20lila-sm.jpg", title:"A more casual Lila"},{src:"23_09_19kosmos_sm.jpg", title:"Speedpaint of Kos-mos from Xenosaga"},{src:"23_09_04lilaforms-angel_sm.png", title:"Concept sketch for Lila's angel guardian form"},{src:"23_08_06skuxios.jpg", title:"Purrloin/Luxio/Skitty pokefusion design"}, {src:"23_08_06skurrxio2_sm.png", title:"Purrloin/Luxio/Skitty pokefusion design"},{src:"23_05_01adventurers_copy.png"},{src:"23_04_29skeefdwarves-edit.png"},{src:"23_04_21morecabbit2.png"},{src:"23_04_21morecabbit1.png"},{src:"23_04_20cabbits.png"},{src:"23_03_04purroinsonic_sm.png"},{src:"23_04_10jett2_sm.png"},{src:"23_04_01ven_sm.png"},{src:"23_03_28atollasparkledog-sm.png"},{src:"23_03_20cheetah-sm.png"},{src:"23_03_16cpapmay_sm.png"},{src:"23_02_20dustyredux_sm.png"},{src:"23_02_19dustystudies-sketch_sm.png"},{src:"23_02_19dustystudies-color_sm.png"},{src:"23_02_19-24genetstudies_sm.png"},{src:"23_02_16bridgets_sm.png"},{src:"23_02_12snowlepdesign_sm.png", title: "Got the itch to make yet another pink cat lmao"},{src:"23_02_10may_sm.png"},{src:"23_02_06critters_sm.png"},{src:"23_02_05maybadgemockup_sm.png"},{src:"23_02_01-04maypacas_sm.png"},{src:"23_01_25merleheads_sm.png"},{src:"23_01_23beepose-sketch_sm.png"},{src:"23_01_19acaraaisha_sm.png"},{src:"23_01_18misc_sm.png"},{src:"23_01_14kougras-cr.png"},
+          {src:"01_04dncskeef-grafaiai_cr.png"},{src:"01_03skeefconcern.png"},{src: "01_02rprskeefs.png", alt: "Three digital pencil bust sketches of a short haired miqote", title: "Skeef in her reaper glams"}
+          ]
+        }
+      }
+    }).mount('#gallery2')
+    
+  </script>
+  <script>
+    (function() {
+    var $gallery = new SimpleLightbox('#gallery1 a', {});
+    var $gallery = new SimpleLightbox('#gallery2 a', {});
+    })();
+  </script>
+</html>

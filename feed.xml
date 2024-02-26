@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+  <title>QRUNCHYSNAQ Updates</title>
+  <description>This is my silly little web space full of stuff I like and things I like to do. </description>
+  <link>https://qrunchysnaq.neocities.org</link>
+  <lastBuildDate>
+    Fri, 08 Sep 2023 19:10:00 -0500
+  </lastBuildDate>
+  <ttl>20000</ttl>
+
+  <item>
+  <title>Art update</title>
+  <description>
+    Added some art to the art page. Also trying to get my RSS feed running again. I'll add the link back to the site if I can get it to work.
+  </description>
+  <link>https://qrunchysnaq.neocities.org</link>
+  <pubDate>
+    Fri, 08 Sep 2023 19:10:00 -0500
+  </pubDate>
+</item>
+</channel>
+</rss>
