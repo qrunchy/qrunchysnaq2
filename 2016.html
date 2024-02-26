@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2016</title>
+<link rel="icon" type="image/x-icon" href="img/cdfavicon.ico">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="simple-lightbox.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="load.js"></script>
+<script type="text/javascript" src="cursor.js"></script> 
+  </head>
+  <body>
+    <div id="box">
+        <header></header> 
+        <nav></nav> 
+        <div id="border">
+            <img src="img/dolphin.png" id="tldecor" alt="decorative dolphin facing left">
+          <img src="img/dolphin.png" id="trdecor" alt="decorative dolphin facing right">
+          <div id="container">
+          <div id="pagecontent" tabindex="0">
+            <div id="top"></div>
+            <p>Art | <a href="archive.html" target="_blank">Archive</a><br>
+              <div id="archnav"></div>
+              <a href="#fin">Finished work</a> | <a href="#rough">Rough work</a>
+              <h3><img src="img/2016.png" class="subtitle1"></h3>
+              2016 is a bit fuzzy, it was my first year home after dropping out of art school and I just took it easy. I only worked a part time job for a few months so I had a lot of free time. The Steven Universe hyperfixation finally started to wane, but it hadn't yet fully loosened its grip on my brain. I played Dungeons and Dragons for a bit, tried World of Warcraft briefly, and got really into The Adventure Zone. This is also when I created my third fursona Merle.
+              <br><br>
+              <h2><img src="img/finishedwork.png" class="subtitle" id="fin" alt="Finished Work"></h2>
+            <div id="gallery1">
+              <a v-bind:href="'art/16/'+image.src" v-for="image in images">
+                <img v-bind:src="'art/16/thumbs/'+image.src" :alt="image.alt" :title="image.title" :key="image"/>
+              </a>
+            </div>
+            <a href="#top">Back to top</a>
+            <br><br>
+            <h2><img src="img/roughwork.png" class="subtitle" id="rough" alt="Rough Work"></h2>
+            <div id="gallery2">
+              <a v-bind:href="'art/16/rough/'+image.src" v-for="image in images">
+                <img v-bind:src="'art/16/rough/thumbs/'+image.src" :alt="image.alt" :title="image.title" :key="image"/></a>
+            </div>
+            <a href="#top">Back to top</a>
+          </div>
+            </div>
+            <footer></footer>
+        </div>
+   </div>
+  </body>
+  <script>
+    const { createApp } = Vue
+    createApp({
+      data() {
+        return {
+          images: [{src:"16_01_00peepo.jpg"},{src:"16_02_09mersona.png"},{src:"16_02_18meri.png"},{src:"16_05_11litten.png"},{src:"16_06_26b.png"},{src:"16_07_23sonas.png"},{src:"16_08_05-0506chars_s.png"},{src:"16_08_07wartortle_s.png"},{src:"16_08_08chus_s.png"},{src:"16_09_23pikasquad.png"},{src:"16_10_24merlesmock.png"},{src:"16_10_25MerleDress.png"},{src:"16_11_04hide.png"},{src:"16_11_16Telephone.png"},{src:"16_12_22MAGO-RAAAH.png"}]
+        }
+      }
+    }).mount('#gallery1')
+
+    createApp({
+      data() {
+        return {
+          images: [{src:"01_08_16_irisagate_edit.jpg"},{src:"01_11_16_edit_justmay.png"},{src:"16_01_04-02.jpg"},{src:"16_01_07.jpg"},{src:"16_01_26coatwitch1.jpg"},{src:"16_01_26coatwitch2.jpg"},{src:"16_01_31_FJMT.png"},{src:"16_02_01-moodswing.jpg"},{src:"16_02_01-snrl.png"},{src:"16_02_01-snrl2.png"},{src:"16_02_03iris.jpg"},{src:"16_02_04-babs.jpg"},{src:"16_02_04-babs2.jpg"},{src:"16_02_07-bird_mtt.jpg"},{src:"16_02_12milesnpeepo.jpg"},{src:"16_02_12owlcat.jpg"},{src:"16_02_18billymiles.png"},{src:"16_02_18billys.png"},{src:"16_02_18shadowbilly.png"},{src:"16_02_22meeri.png"},{src:"16_02_22qrunchymeeri.jpg"},{src:"16_02_29zoras.jpg"},{src:"16_03_01zoras.jpg"},{src:"16_03_03bear.jpg"},{src:"16_03_05pizzatime.png"},{src:"16_03_06 idk.jpg"},{src:"16_03_11dro.png"},{src:"16_03_28meow.png"},{src:"16_03_28sonas1.png"},{src:"16_04_15dominator.png"},{src:"16_04_23-unis.png"},{src:"16_04_24-unicorn.png"},{src:"16_04_28-bloodelf.jpg"},{src:"16_04_28-bloodelf_bigguy.jpg"},{src:"16_04_28-unicorn.png"},{src:"16_04_28-unicorn1.jpg"},{src:"16_04_29-irises.jpg"},{src:"16_05_06alpaca.jpg"},{src:"16_05_18unicorn2.png"},{src:"16_05_xx2A-sketchins.jpg"},{src:"16_06_06.jpg"},{src:"16_06_20bubblines.png"},{src:"16_07_01.png"},{src:"16_07_04merle.jpg"},{src:"16_08_05.png"},{src:"16_08_05refcuts.png"},{src:"16_09_20IMAG1508.png"},{src:"16_09_27merlefall.png"},{src:"16_10_19merles.png"},{src:"16_10_19merles2.jpg"},{src:"16_10_26bee.jpg"},{src:"16_10_26taako.jpg"},{src:"16_10_26taako.png"},{src:"16_10_xxmerlefaces.jpg"},{src:"16_11_03treshornyboys.jpg"},{src:"16_11_06taako.jpg"},{src:"16_11_21angustaako.jpg"},{src:"16_11_21flars.png"},{src:"16_11_21meowfs.jpg"},{src:"16_12_01maxfuncon.png"},{src:"16_12_01maxfuncon2.png"},{src:"16_12_01maxfuncon3.png"},{src:"16_12_10jackals.jpg"},{src:"16_12_10jackals.png"},{src:"16_12_22horseboy.png"},{src:"16_12_22MAGOO.png"},{src:"16_12_27julians.jpg"}]
+        }
+      }
+    }).mount('#gallery2')
+    
+  </script>
+  <script>
+    (function() {
+    var $gallery = new SimpleLightbox('#gallery1 a', {});
+    var $gallery = new SimpleLightbox('#gallery2 a', {});
+    })();
+  </script>
+</html>

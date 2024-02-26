@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2017</title>
+<link rel="icon" type="image/x-icon" href="img/cdfavicon.ico">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="simple-lightbox.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="load.js"></script>
+<script type="text/javascript" src="cursor.js"></script> 
+  </head>
+  <body>
+    <div id="box">
+        <header></header> 
+        <nav></nav> 
+        <div id="border">
+            <img src="img/dolphin.png" id="tldecor" alt="decorative dolphin facing left">
+          <img src="img/dolphin.png" id="trdecor" alt="decorative dolphin facing right">
+          <div id="container">
+          <div id="pagecontent" tabindex="0">
+            <div id="top"></div>
+            <p><a href="art.html">Art</a> | <a href="archive.html">Archive</a><br>
+              <div id="archnav"></div>
+              <a href="#fin">Finished work</a> | <a href="#rough">Rough work</a>
+              <h3><img src="img/2017.png" class="subtitle1"></h3>
+              In 2017 I started a new part time job and had a lot of spare time before I went back to school in the fall. That year I started dating my current partner, and she kinda became a big part of my art for a while. I even gave her a fursona to draw mushy art with my own. That honeymoon phase amirite. I also started playing Guild Wars 2, which quickly became an obsession and the subject of so much fan art.<br>
+              Images are arranged chronologically
+              <br><br>
+              <h2><img src="img/finishedwork.png" class="subtitle" id="fin" alt="Finished Work"></h2>
+            <div id="gallery1">
+              <a v-bind:href="'art/17/'+image.src" v-for="image in images">
+                <img v-bind:src="'art/17/thumbs/'+image.src" :alt="image.alt" :title="image.title" :style="image.style" :key="image"/>
+              </a>
+            </div>
+            <a href="#top">Back to top</a>
+            <br><br>
+            <h2><img src="img/roughwork.png" class="subtitle" id="rough" alt="Rough Work"></h2>
+            <div id="gallery2">
+              <a v-bind:href="'art/17/rough/'+image.src" v-for="image in images">
+                <img v-bind:src="'art/17/rough/thumbs/'+image.src" :alt="image.alt" :title="image.title" :style="image.style" :key="image"/></a>
+            </div>
+            <a href="#top">Back to top</a>
+          </div>
+            </div>
+            <footer></footer>
+        </div>
+   </div>
+  </body>
+  <script>
+    const { createApp } = Vue
+    createApp({
+      data() {
+        return {
+          images: [{src:"01_13bee.png"},{src:"01_13may.png"},{src:"01_14BetaGFs.png", style:"object-position:-190px 0px;"},{src:"01_17desertceti.png"},{src:"01_19mta.png"},{src:"02_07telephone.png"},{src:"02_17feral_bee1.png", style:"object-position:-10px 0px;"},{src:"02_17feral_bee2.png"},{src:"02_18lurantis.png"},{src:"02_26trainers.png"},{src:"03_11hair.png"},{src:"03_14dusty.png"},{src:"03_16sidon.png"},{src:"03_25mayav_full.png"},{src:"03_26asterprelim.png"},{src:"03_26dustycane.png"},{src:"04_17merle.png"},{src:"04_19astersnooze.png"},{src:"05_16lilbee.png"},{src:"06_10sumr.png"},{src:"06_22degga.png"},{src:"07_08stel.png"},{src:"07_20sparrow_denim.png"},{src:"07_20tass.png"},{src:"07_27gay.png"},{src:"08_27ace-skyler_comm2.png"},{src:"10_24bee.png"},{src:"IrisAgateRef.png"}]
+        }
+      }
+    }).mount('#gallery1')
+
+    createApp({
+      data() {
+        return {
+          images: [{src:"01_10oldmancat.png"},{src:"01_24cetiredes.png", style:"object-position:-25px 0px;"},{src:"01_27volga2.png"},{src:"01_27volga_c.png"},{src:"01_29lne.png"},{src:"0250_edt.png"},{src:"0257_edt.png"},{src:"02_18gdimadi.png"},{src:"02_18lgs.png"},{src:"02_18toonybee_full.png"},{src:"03_02serval.png"},{src:"03_03aster.png"},{src:"03_16sidon.png"},{src:"03_21botw_eno.png"},{src:"03_25mays.png"},{src:"03_26asters.png"},{src:"03_27bees.png"},{src:"04_17zoraocs.png"},{src:"04_29feeling.png"},{src:"05_17madicrush.png"},{src:"05_22madirosa.png"},{src:"05_23kikinfriends.png"},{src:"05_27qrunchyasura.png"},{src:"05_28qrunchyfaces.png"},{src:"05_31deggacharm.png"},{src:"06_22sofmay.png"},{src:"07_13seaslug.png"},{src:"07_14nudi.png"},{src:"07_14sackfolks.png"},{src:"07_17bearin.png"},{src:"07_17bearin2.png"},{src:"07_17morebearins_sleep.png"},{src:"07_20sparrowsktch.png"},{src:"07_20tass.png"},{src:"08_05asterfishing.png"},{src:"08_05nudicolors.png"},{src:"08_05nudicolors2.png"},{src:"12_11.png"},{src:"DSC_0119.png"},{src:"DSC_0121.png"},{src:"DSC_0122.png"},{src:"taakolup.png"}]
+        }
+      }
+    }).mount('#gallery2')
+    
+  </script>
+  <script>
+    (function() {
+    var $gallery = new SimpleLightbox('#gallery1 a', {});
+    var $gallery = new SimpleLightbox('#gallery2 a', {});
+    })();
+  </script>
+</html>
