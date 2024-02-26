@@ -1,0 +1,152 @@
+
+<!--general template-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>template</title>
+<link rel="icon" type="image/x-icon" href="img/cdfavicon.ico">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="load.js"></script>
+<script type="text/javascript" src="cursor.js"></script>
+    </head>
+  <body>
+    <div id="box">
+        <header></header> 
+        <nav></nav> 
+          <div id="border">
+            <img src="img/dolphin.png" id="tldecor" alt="decorative dolphin facing left">
+          <img src="img/dolphin.png" id="trdecor" alt="decorative dolphin facing right">
+          <div id="container">   
+          <div id="pagecontent" tabindex="0">
+            
+        </div>
+        </div>
+            <footer></footer>
+          </div>
+   </div>
+  </body>
+</html>
+
+<!--gallery template-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAGE TITLE</title>
+<link rel="icon" type="image/x-icon" href="img/cdfavicon.ico">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="simple-lightbox.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="load.js"></script>
+<script type="text/javascript" src="cursor.js"></script> 
+  </head>
+  <body>
+    <div id="box">
+        <header></header> 
+        <nav></nav> 
+        <div id="border">
+            <img src="img/dolphin.png" id="tldecor" alt="decorative dolphin facing left">
+          <img src="img/dolphin.png" id="trdecor" alt="decorative dolphin facing right">
+          <div id="container">
+          <div id="pagecontent" tabindex="0">
+            <div id="top"></div>
+            <p>Art | <a href="archive.html" target="_blank">Archive</a><br>
+              <div id="archnav"></div>
+              <a href="#fin">Finished work</a> | <a href="#rough">Rough work</a>
+              <h3>Page Heading</h3>
+              This is a repository for artwork I've done in the past, dating back to 2005, and a few pieces from earlier than that.
+              This section is not fully functional yet as I am still building the gallery pages.
+                <h3 id="fin">Finished work</h3>
+            <div id="gallery1">
+              <a v-bind:href="'art/'+image.src" v-for="image in images">
+                <img v-bind:src="'art/'+image.src" :alt="image.alt" :title="image.title" :key="image"/>
+              </a>
+            </div>
+            <a href="#top">Back to top</a>
+            <h3 id="rough">Rough Work</h3>
+            <div id="gallery2">
+              <a v-bind:href="'art/'+image.src" v-for="image in images">
+                <img v-bind:src="'art/'+image.src" :alt="image.alt" :title="image.title" :key="image"/></a>
+            </div>
+            <a href="#top">Back to top</a>
+          </div>
+            </div>
+            <footer></footer>
+        </div>
+   </div>
+  </body>
+  <script>
+    const { createApp } = Vue
+    createApp({
+      data() {
+        return {
+          images: [{src:"", alt: "", title: ""}]
+        }
+      }
+    }).mount('#gallery1')
+
+    createApp({
+      data() {
+        return {
+          images: []
+        }
+      }
+    }).mount('#gallery2')
+    
+  </script>
+  <script>
+    (function() {
+    var $gallery = new SimpleLightbox('#gallery1 a', {});
+    var $gallery = new SimpleLightbox('#gallery2 a', {});
+    })();
+  </script>
+</html>
+
+<!--chao profiles template-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chao Name</title>
+<link rel="icon" type="image/x-icon" href="img/cdfavicon.ico">
+    <script src="simple-lightbox.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="load.js"></script>
+<script type="text/javascript" src="cursor.js"></script>
+    </head>
+  <body>
+    <div id="box">
+        <header></header> 
+        <nav></nav> 
+          <div id="border">
+            <img src="img/dolphin.png" id="tldecor" alt="decorative dolphin facing left">
+          <img src="img/dolphin.png" id="trdecor" alt="decorative dolphin facing right">
+          <div id="container">   
+          <div id="pagecontent" tabindex="0">
+            <!--desc-->
+            <div id="cb"><img id="chaobig" src="https://dl.dropboxusercontent.com/s/gtv3c70usw800u7/leon.png"></div>
+            <!--chao profiles-->
+            <h3>Gallery</h3>
+            <div id="gallery1">
+              <div class="thumb">
+                <!--gallery-->
+              </div>
+        </div>
+        </div>
+            <footer></footer>
+          </div>
+   </div>
+  </body>
+  <script>
+    (function() {
+    var $gallery = new SimpleLightbox('#gallery1 a', {});
+    })();
+  </script>
+</html>
