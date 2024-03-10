@@ -1,6 +1,11 @@
 name: Deploy to Tiny
 on:
     workflow_dispatch:
+    push:
+        branches:
+            - main
+        paths-ignore:
+            - '.github/workflows/**'
 jobs:
     deploy:
         runs-on: self-hosted
