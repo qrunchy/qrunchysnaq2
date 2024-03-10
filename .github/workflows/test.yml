@@ -3,7 +3,7 @@ on:
     workflow_dispatch:
 jobs:
     test-the-runner:
-        runs-on: [self-hosted, Linux, X64, 'deployment']
+        runs-on: self-hosted
         steps:
             - name: Log some stuff
               run: |
