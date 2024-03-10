@@ -1,0 +1,11 @@
+name: Deploy to Tiny
+on:
+    workflow_dispatch:
+jobs:
+    deploy:
+        runs-on: self-hosted
+        steps:
+            - name: Refresh Codebase
+              run: |
+                cd /server/qrunchysnaq2
+                git pull
