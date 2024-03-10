@@ -1,0 +1,12 @@
+name: Test Workflow
+on:
+    workflow_dispatch:
+jobs:
+    test-the-runner:
+        runs-on: [self-hosted, Linux, X64, deployment]
+        steps:
+            - name: Log some stuff
+              run: |
+                pwd
+                ls -l 
+                echo $${{ toJson(github) }}
