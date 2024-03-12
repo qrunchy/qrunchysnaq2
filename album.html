@@ -16,18 +16,16 @@
     <div id="box">
         <header></header> 
         <nav></nav> 
-          <div id="border">
-            <img src="img/dolphin.png" id="tldecor" alt="decorative dolphin facing left">
-          <img src="img/dolphin.png" id="trdecor" alt="decorative dolphin facing right">
+          <main>
           <div id="container">   
           <div id="pagecontent" tabindex="0">
             <a href="neutral.html">Neutral Garden</a> | <a href="hero.html">Hero Garden</a> | <a href="dark.html">Dark Garden</a><br>
             <a href="chao.html">Back</a> <br><br>
-            <h1><img src="img/chao/photoalbum.png" class="gardenbanner" alt="Screenshot of Tails petting three chao with text that reads 'Photo Album'"></h1>
+            <h1><img src="img/chao/photoalbum_lg.png" class="gardenbanner" alt="Screenshot of Tails petting three chao with text that reads 'Photo Album'"></h1>
             <p>Hi welcome to my chao photo album! This is just a gallery of my little guys hanging out and having fun.</p>
             <div id="gallery1">
                 <a v-bind:href="'img/chao/album/'+image.src" v-for="image in images">
-                  <img v-bind:src="'img/chao/album/'+image.src" :alt="image.alt" :title="image.title" :key="image"/>
+                  <img v-bind:src="'img/chao/album/athumbs/'+image.src" :alt="image.alt" :title="image.title" :key="image"/>
                 </a>
               </div>
             <a href="chao.html">Back</a>

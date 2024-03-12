@@ -15,14 +15,14 @@ html{
 
 :root {
   /*background color*/ --bgcolor: black;
-  /*background image*/ --bgimg: url("img/waterbg-min.jpg");
-  /*border color*/ --bcolor: #804cd6;
+  /*background image*/ --bgimg: url("img/cloudbg.jpg");
+  /*border color*/ --bcolor: #592ec5;
   /*body text color*/--txtcolor: rgb(35, 19, 107);
   /*link color*/--acolor: rgb(19, 67, 107);
-  --hcolor: #632fb6;
-  /*navbar bg color*/--boxes1: #b3f7f7;
-  /*updates bg color*/--boxes2: #c9f5fd;
-  /*content bg color*/--container: #fcdcf6;
+  --hcolor: #592ec5;
+  /*navbar bg color*/--boxes1: #f5a9fc;
+  /*updates bg color*/--boxes2: #ffbefa;
+  /*content bg color*/--container: #fdd4f6;
   /*border style*/--bstyle: solid;
   /*border width*/--bwidth: 2px;
   /*border radius*/--bradius: 30px;
@@ -352,7 +352,7 @@ nav {
   display: none;
 }
 
-#border {
+main {
   background-color:var(--container);
   background-image: url("img/graph_paper-transparent.png");
   overflow: hidden;
@@ -584,7 +584,7 @@ header img {
   border-color: var(--bcolor);
   border-width: var(--bwidth);
   height: fit-content;
-  width: 245px;
+  width: 220px;
   padding: 1em;
   margin: auto;
 }
@@ -610,7 +610,7 @@ header img {
 }
 
 /*content box*/
-#border {
+main {
   background-color:var(--container);
   background-image: url("img/graph_paper-transparent.png");
   border-radius: var(--bradius);
@@ -820,7 +820,7 @@ width: 55%;
 }
 
 .gardenbanner {
-width: 80%;
+max-width: 80%;
 }
 
 #cb {

@@ -1,34 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-      <atom:link href="https://qrunchysnaq.neocities.org/feed.xml" rel="self" type="application/rss+xml" />
-      <title>QRUNCHYSNAQ</title>
-      <link>https://qrunchysnaq.neocities.org/</link>
+      <atom:link href="https://qrunchy.space/feed.xml" rel="self" type="application/rss+xml" />
+      <title>QRUNCHY SPACE</title>
+      <link>https://qrunchy.space/</link>
       <lastBuildDate>
-          Mon, 19 Feb 2024 00:00:00 -0500
+          Mon, 11 Mar 2024 21:30:00 -0500
       </lastBuildDate>
       <description>Hello! Call me Merle~ Welcome to my silly little site full of stuff I like and things I like to do.</description>
       <language>en-us</language>
-      
-      <item>
-        <title>New blog page!</title>
-        <description>
-          Just one update today, but I've added a new feature to the site! I've started a blog for my ita bag, which I've been slowly building up since early August. I'm still pretty new to it all but I think it'll be fun to catalog my journey.
-        </description>
-        <link>https://qrunchysnaq.neocities.org/changelog</link>
-        <guid>https://qrunchysnaq.neocities.org/091723</guid>
-        <pubDate>
-         Sun, 17 Sep 2023 19:15:00 -0500
-        </pubDate>
-      </item>   
       
       <item>
         <title>New blog entry and adoptables</title>
         <description>
           Wrote a new entry on my ita blog. I've also added some more adoptables to the graphics stash.
         </description>
-        <link>https://qrunchysnaq.neocities.org/changelog</link>
-        <guid>https://qrunchysnaq.neocities.org/091823</guid>
+        <link>https://qrunchy.space/changelog</link>
+        <guid>https://qrunchy.space/091823</guid>
         <pubDate>
          Mon, 18 Sep 2023 22:25:00 -0500
         </pubDate>
@@ -39,8 +27,8 @@
         <description>
           Uploaded another piece to the art page. I also fixed the ita blog layout to be more responsive. That's all for today!
         </description>
-        <link>https://qrunchysnaq.neocities.org/changelog</link>
-        <guid>https://qrunchysnaq.neocities.org/092023</guid>
+        <link>https://qrunchy.space/changelog</link>
+        <guid>https://qrunchy.space/092023</guid>
         <pubDate>
          Wed, 20 Sep 2023 21:20:00 -0500
         </pubDate>
@@ -51,8 +39,8 @@
         <description>
           Posted some art, and added a few links. I separated the community links into their own little area on the links page. Along with the new drawings, the art page should load a little lighter now. I'll be working on fixing the other image heavy parts of the site as well.
         </description>
-        <link>https://qrunchysnaq.neocities.org/changelog</link>
-        <guid>https://qrunchysnaq.neocities.org/092723</guid>
+        <link>https://qrunchy.space/changelog</link>
+        <guid>https://qrunchy.space/092723</guid>
         <pubDate>
          Wed, 27 Sep 2023 20:00:00 -0500
         </pubDate>
@@ -64,8 +52,8 @@
           Just wanted to drop in with an update since it's been a sec. I'm currently adjusting to some new meds and it's knocked me off my creative pursuits for the time being. I've been spending more time reading and playing video games lately, not so much making stuff. I'm trying to push myself to dip my toes back into it but it's slow going. That combined with feeling the need to make some pretty large scale changes to the site, I'm a bit stuck moving forward. I hope to get back on the horse sooner than later but for now I'm letting myself take it easy. I'm generally prone to rotating interests, so I expect to reignite my website passion eventually. I've noticed some broken images in the chao garden and I apologize for that! I'll have to look into that... at some point lol.
         Thank you for your patience, I appreciate everyone who has visited and especially those who have left kind messages, I'm still checking in on things periodically. Take care!
         </description>
-        <link>https://qrunchysnaq.neocities.org/changelog</link>
-        <guid>https://qrunchysnaq.neocities.org/110523</guid>
+        <link>https://qrunchy.space/changelog</link>
+        <guid>https://qrunchy.space/110523</guid>
         <pubDate>
          Sun, 05 Nov 2023 10:35:00 -0500
         </pubDate>
@@ -79,8 +67,8 @@
         I'm not sure how long it's going to take to get it all ready, but that's the current project. I'm also once again working on a gallery overhaul on the coding end to make even easier to update, but that's going to have to be on the new site since it'll be using php.
         I apologize for the long absence, but I think I'm back in the swing of things for now. I want to fix up some issues on the current site soon. Sorry if it's another little while before I start really updating visibly again. Want to get this all going again sooner than later, so here's hoping.
         </description>
-        <link>https://qrunchysnaq.neocities.org/changelog</link>
-        <guid>https://qrunchysnaq.neocities.org/012824</guid>
+        <link>https://qrunchy.space/changelog</link>
+        <guid>https://qrunchy.space/012824</guid>
         <pubDate>
          Sun, 28 Dec 2024 10:40:00 -0500
         </pubDate>
@@ -91,10 +79,22 @@
         <description>
           Fixed a couple things tonight. I got the broken images in the neutral chao garden working and I have optimized all the thumbnails in the archives so the galleries should load faster now. I also fixed the header on the Catgirl Corner so it displays correctly on desktop now. It's still not quite right on mobile yet, I'll have to fix that later. Since Sheezy.art is back up and running for existing users, I added a link to my Sheezy profile to the links page. My gallery there isn't quite up to date yet but it should be soon so please check it out if you're interested!
         </description>
-        <link>https://qrunchysnaq.neocities.org/changelog</link>
-        <guid>https://qrunchysnaq.neocities.org/021824</guid>
+        <link>https://qrunchy.space/changelog</link>
+        <guid>https://qrunchy.space/021824</guid>
         <pubDate>
          Mon, 19 Feb 2024 00:00:00 -0500
+        </pubDate>
+      </item>
+      
+        <item>
+        <title>Some minor fixes</title>
+        <description>
+           Hey! I'm excited to announce my site is now fully moved to its new host and domain at https://qrunchy.space! It's now being hosted by a couple friends of mine on their own server. The old neocities pages now redirect to qrunchy.space so there shouldn't be any issues with broken links. As you can probably tell, I decided to celebrate the new domain with an updated banner and a new site theme! In other news, I've finished optimizing images across the site so now they should all load faster. Sorry if I missed something though! I've also added some stuff to the fun, stash, links, and credits pages. Check 'em out!
+        </description>
+        <link>https://qrunchy.space/changelog</link>
+        <guid>https://qrunchy.space/031124</guid>
+        <pubDate>
+         Mon, 11 Mar 2024 21:30:00 -0500
         </pubDate>
       </item>
     </channel>
