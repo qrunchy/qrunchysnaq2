@@ -1,9 +1,3 @@
-<?php
-        $thumbs = glob("art/thumbs/fin/*.*");
-        // gallery layout
-        $thumbs = array_reverse($thumbs);
-        ?>
-
 <html>
     <head>
         <title>PHP Lightbox Testing</title>
@@ -12,9 +6,8 @@
                 display: flex;
                 flex-wrap: wrap;
                 gap: 5px;
-                margin: auto;
+                margin: 0 auto;
                 overflow: hidden;
-                justify-content: center;
             }
 
             .gallery img {
@@ -112,21 +105,32 @@
     <body>
     Finished work<br>
     <div class="gallery">
-        <?php foreach ($thumbs as $idx => $t) { 
-            $prev = $idx - 1;
-            $next = $idx + 1; ?>
-            <a href="#exf<?= $idx ?>"><img src="<?= $t ?>" class="thumb"></a>
-            <div class="expand" id="exf<?= $idx ?>">
-                <a href="#"><img src="art/fin/<?= rawurlencode(basename($t)) ?>"></a>
-                <div class="nav"><a href="#exf<?= $prev ?>">Previous</a> | <a href="#exf<?= $next ?>">Next</a></div>
-                <div class="fvlink"><a href="#fvf<?= $idx ?>">Full View</a></div>
-                <div class="meta">
-                    <div class="desc">Image description goes here</div>
-                    <div class="tags">#pretend #these #are #tags</div>
+        <?php
+        $thumbs = glob("art/thumbs/fin/*.*");
+        $countex = 0;
+        $countfv = 0;
+        $prev = $countex - 1;
+        $next = $countex + 1;
+        // gallery layout
+        $thumbs = array_reverse($thumbs);
+        foreach ($thumbs as $t) {
+            $countex++;
+            $countfv++;
+            $prev++;
+            $next++;
+            printf("<a href='#exf%d'><img src='%s' class='thumb'></a>
+            <div class='expand' id='exf%d'>
+                <a href='#_' ><img src='art/fin/%s'></a>
+                <div class='nav'><a href='#exf%d'>Previous</a> | <a href='#exf%d'>Next</a></div>
+                <div class='fvlink'><a href='#fvf%d'>Full View</a></div>
+                <div class='meta'>
+                    <div class='desc'>Image description goes here</div>
+                    <div class='tags'>#pretend #these #are #tags</div>
                 </div>
             </div>
-            <div class="fullview" id="fvf<?= $idx ?>"><a href="#exf<?= $idx ?>"><img src="art/fin/<?= rawurlencode(basename($t)) ?>"></a></div>
-        <?php } ?>
+            <div class='fullview' id='fvf%d'><a href='#exf%d'><img src='art/fin/%s'></a></div>", 
+            $countex, $t, $countex, rawurlencode(basename($t)), $prev, $next, $countfv, $countfv, $countex, rawurlencode(basename($t)));
+        }
         ?>
     </div>
     <br><br>
