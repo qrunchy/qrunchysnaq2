@@ -34,8 +34,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art</title>
     <link rel="icon" type="image/x-icon" href="img/cdfavicon.ico">
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <link rel="stylesheet" type="text/css" href="style2.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="load.js"></script>
 <script type="text/javascript" src="cursor.js"></script>
@@ -96,7 +95,7 @@
                         <a href="#<?= "$previmg"; ?>">Previous</a> | <a href="#<?= "$nextimg"; ?>">Next</a><br>
                         <a href="#fvf<?= $t ?>">Full View</a>
                         <p><i><?php $seg = explode("_", $slug);
-                        echo "$seg[1]/$seg[2]/20$seg[0]";?></i><br>
+                        echo "$seg[0]/$seg[1]/2024";?></i><br>
                         <?php if ( is_string($text) && (preg_match('#^desc: (.*)#m', $text, $match))) {
                         echo "$match[1]";} ?></p>
                         </div>
@@ -144,7 +143,7 @@
                             <a href="#<?= "$previmg"; ?>">Previous</a> | <a href="#<?= "$nextimg"; ?>">Next</a><br>
                             <a href="#fvr<?= $t ?>">Full View</a>
                             <p><i><?php $seg = explode("_", $slug);
-                            echo "$seg[1]/$seg[2]/20$seg[0]";?></i><br>
+                            echo "$seg[0]/$seg[1]/2024";?></i><br>
                             <?php if ( is_string($text) && (preg_match('#^desc: (.*)#m', $text, $match))) {
                             echo "$match[1]";} ?></p>
                         </div>

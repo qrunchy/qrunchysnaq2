@@ -34,9 +34,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2014</title>
     <link rel="icon" type="image/x-icon" href="img/cdfavicon.ico">
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="simple-lightbox.js"></script>
-    <link rel="stylesheet" type="text/css" href="style2.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="load.js"></script>
 <script type="text/javascript" src="cursor.js"></script>
@@ -51,6 +49,7 @@
           <div id="pagecontent" tabindex="0">
             <div id="top"></div>
             <p>Art | <a href="archive.html">Archive</a><br>
+            <div id="archnav"></div>
               <a href="#fin">Finished work</a> | <a href="#rough">Rough work</a>
               <h1><img src="img/title-art.png" class="subtitle1" alt="Art"></h1>
                 My current work from this year, newest to oldest.

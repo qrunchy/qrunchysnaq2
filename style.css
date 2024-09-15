@@ -26,6 +26,7 @@ html{
   /*border style*/--bstyle: solid;
   /*border width*/--bwidth: 2px;
   /*border radius*/--bradius: 30px;
+  /*full view overlay*/--overlay: rgba(255, 204, 240, 0.7);
   --padding: 10px;
   --margin: 1em;
   
@@ -164,7 +165,7 @@ padding: 5px;
 /*cbox area*/
 #cbox iframe {
 margin: auto;
-height: 230px;
+height: 290px;
 border-radius: 10px;
 border-color: var(--bcolor);
 border-style:dashed;
@@ -428,6 +429,111 @@ margin: .25rem;
 border-radius: 10px;
 }
 
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 350px;
+  overflow-y: auto;
+  gap: .30rem .70rem;
+  }
+  
+  .gallery img {
+  margin: .25rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  object-fit: cover;
+  }
+    
+  .galthumb {
+      height: 150px;
+      max-width: 205;
+      border-radius: 10px;
+  }
+  .expand {
+      /* Default to hidden */
+          display: none;
+      /* Overlay entire screen */
+          position: fixed;
+          z-index: 999;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+      /* A bit of padding around image */
+          padding: 1em;
+      /* Translucent background */
+          background: var(--overlay);
+      }
+  
+      /* Unhide the lightbox when it's the target */
+      .expand:target {
+          display: block;
+      }
+  
+      .expand img {
+      /* Full width and height */
+          max-width: 100% !important;
+          display: block;
+          margin: auto;
+          margin-top: 50;
+      }
+  
+      .fullview {
+      /* Default to hidden */
+          display: none;
+      /* Overlay entire screen */
+          position: fixed;
+          z-index: 999;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+      /* Translucent background */
+          background: var(--overlay);
+          overflow-y: auto;
+      }
+  
+      /* Unhide the lightbox when it's the target */
+      .fullview:target {
+          display: block;
+      }
+  
+      .fullview img {
+      /* Full width and height */
+          display: block;
+          margin: auto;
+          padding: 10px;
+          max-width: 100%;
+          position: relative;
+          top: 20px;
+          left: 0;
+          right: 0;
+          bottom: 0;
+      }
+  
+      .meta { 
+          text-align: center;
+          margin: auto;
+          margin-top: 5px;
+          width: 100%;  
+          background-color: #511579;
+          border-radius: 15px; 
+      }
+  
+      .desc {  
+          padding: 10px;
+          color: white;
+      }
+  
+      .desc a {
+          color: var(--container);
+      }
+  
+      .desc a:active {
+          color: rgb(119, 216, 255);
+      }
+
 /*catgirl shrine*/
 #catgirls {
 text-align: left;
@@ -635,21 +741,6 @@ main {
   width: 50%;
 }
 
-#tldecor{
-  position:absolute;
-  top: -35px;
-  left: -40px;
-  width: 135px;
-  transform: scaleX(-1);
-}
-
-#trdecor{
-  position:absolute;
-  top: -35px;
-  right: -40px;
-  width: 135px;
-}
-
 #container{
   display: flex;
   flex-wrap: wrap;
@@ -667,14 +758,14 @@ main {
 }
 
 #content {
-  height: 575px;
+  height: 650px;
   padding: 20px; 
   flex: 1;
   overflow: auto;
 }
 
 #contentr {
-  max-height: 575px;
+  max-height: 650px;
   padding: 20px; 
   flex: 1;
   overflow: auto;
@@ -682,7 +773,7 @@ main {
 
 
 #pagecontent {
-  height: 600px;
+  height: 650px;
   padding-top: 20px;
   padding-left:35px; 
   padding-right:35px; 
@@ -744,6 +835,122 @@ border-radius: 10px;
 #gallery3 a:hover img {
 outline: 2px solid var(--bcolor);
 }
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .30rem .70rem;
+  }
+  
+  .gallery a:hover img {
+  outline: 2px solid var(--bcolor);
+  }
+  
+.galthumb {
+    height: 205px;
+    max-width: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+    background-color: #fff;
+}
+
+.expand {
+    /* Default to hidden */
+        display: none;
+    /* Overlay entire screen */
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    /* A bit of padding around image */
+        padding: 1em;
+    /* Translucent background */
+        background: var(--overlay);
+    }
+
+    /* Unhide the lightbox when it's the target */
+    .expand:target {
+        display: block;
+    }
+
+    .expand img {
+    /* Full width and height */
+        max-height: 600px !important;
+        max-width: 600px !important;
+        display: block;
+        margin: auto;
+        margin-top: 50;
+        border: 10px solid #fff;
+        background-color: #fff;
+    }
+
+    .expand a:hover img {
+      outline: 0px solid;
+    }
+
+    .fullview {
+    /* Default to hidden */
+        display: none;
+    /* Overlay entire screen */
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    /* Translucent background */
+        background: var(--overlay);
+        overflow-y: auto;
+    }
+
+    /* Unhide the lightbox when it's the target */
+    .fullview:target {
+        display: block;
+    }
+
+    .fullview img {
+    /* Full width and height */
+        display: block;
+        margin: auto;
+        padding: 10px;
+        border: 1px solid #ddd;
+        background: #fff;
+        max-width: 100%;
+        position: relative;
+        top: 20px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .fullview a:hover img {
+      outline: 0px solid;
+    }
+
+    .meta { 
+        text-align: center;
+        margin: auto;
+        margin-top: 5px;
+        width: 700px;  
+        background-color: #511579;
+        border-radius: 15px; 
+    }
+
+    .desc {  
+        padding: 10px;
+        color: white;
+    }
+
+    .desc a {
+        color: var(--container);
+    }
+
+    .desc a:active {
+        color: rgb(119, 216, 255);
+    }
 
 .archive {
   display: flex;
