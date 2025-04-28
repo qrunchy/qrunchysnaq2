@@ -34,9 +34,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2014</title>
     <link rel="icon" type="image/x-icon" href="img/cdfavicon.ico">
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="simple-lightbox.js"></script>
-    <link rel="stylesheet" type="text/css" href="style2.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="load.js"></script>
 <script type="text/javascript" src="cursor.js"></script>
@@ -51,10 +49,10 @@
           <div id="pagecontent" tabindex="0">
             <div id="top"></div>
             <p>Art | <a href="archive.html">Archive</a><br>
+            <div id="archnav"></div>
               <a href="#fin">Finished work</a> | <a href="#rough">Rough work</a>
-              <h1><img src="img/title-art.png" class="subtitle1" alt="Art"></h1>
-                My current work from this year, newest to oldest.
-                Previous years can be found in the archive section.<br><br>
+              <h1><img src="img/2014.png" class="subtitle1" alt="2014"><br></h1>
+                I was deep in the Steven Universe obsession this year. Spent a lot of time trying to figure out my gemsona's design. I got back into the furry community after losing interest for a few years, and created my first official fursona, May the alpaca. A bit later I felt the need to make an alt fursona, and Bee was born . I experimented a lot with line art and colors. I believe this was also the year I really got into character design.<br><br>
                 
                 <h2><img src="img/finishedwork.png" class="subtitle" id="fin" alt="Finished Work"></h2>
                 <div class="gallery">
