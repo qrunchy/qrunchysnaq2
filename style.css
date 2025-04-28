@@ -752,14 +752,28 @@ outline: 2px solid var(--bcolor);
   width: 100%;
 }
 
+
 #thumblayout {
-display: flex;
-flex-wrap: wrap;
-overflow-y: auto;
-margin: auto;
-justify-content: center;
-width: 100%;
-}
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  margin: auto;
+  justify-content: center;
+  width: 100%;
+  gap: 2px;
+  }
+
+  #thumblayout img {
+    border-radius: 10px;
+  }
+
+  #thumblayout a:hover img {
+    outline: 3px solid rgb(255, 238, 250);
+  }
+
+  #thumblayout a img {
+    outline: 3px solid var(--bcolor);
+    }
 
 .subtitle1 {
   height: 28px;
