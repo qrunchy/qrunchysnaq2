@@ -26,6 +26,8 @@ html{
   /*border style*/--bstyle: solid;
   /*border width*/--bwidth: 2px;
   /*border radius*/--bradius: 30px;
+  /*full view overlay*/--overlay: rgba(255, 204, 240, 0.7);
+  /*full view overlay*/--overlay: rgba(255, 204, 240, 0.7);
   --padding: 10px;
   --margin: 1em;
   
@@ -91,6 +93,11 @@ height: 20px;
 padding: var(--padding);
 }
 
+.logo {
+  padding: 0px .5em 0px .5em;
+  height: 2em;
+}
+
 #splash-pos {
 position: absolute;
 width: 100%;
@@ -110,24 +117,6 @@ color: var(--txtcolor);
 position: relative;
 top: 300px;
 }
-
-
-#recents {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-}
-
-
-#recents img {
-max-width: 150px;
-max-height: 150px;
-object-fit: cover;
-border-radius: 20px;
-padding: 5px;
-}
-
-
 
 /*updates area*/
 #updates{
@@ -164,7 +153,8 @@ padding: 5px;
 /*cbox area*/
 #cbox iframe {
 margin: auto;
-height: 230px;
+height: 290px;
+height: 290px;
 border-radius: 10px;
 border-color: var(--bcolor);
 border-style:dashed;
@@ -179,20 +169,12 @@ display: inline;
 display: inline;
 float: right;
 padding-left: 15px;
-width: 300px;
 }
+
 #about p {
 text-align: left;
+padding: 0px 20px 0px 20px;
 }
-
-#about ul {
-list-style: none;
-}
-
-#about li {
-text-align: left;
-}
-
 
 /*chao garden*/
 .chao {
@@ -215,6 +197,7 @@ list-style-type: none;
 margin-left: 0;
 }
 
+/*status.cafe*/
 #statuscafe {
 font-size: 15px;
   padding: .5em;
@@ -231,6 +214,7 @@ font-size: 15px;
   margin: 0 1em 0.5em 1em;
 }
 
+/*furry ring*/
 #furryring {
   margin: auto;
   text-align: center;
@@ -289,7 +273,6 @@ height: 250px;
 overflow: hidden;
 filter: drop-shadow(5px 5px 4px #9264b8);
 }
-
 
 
 /*changelog page*/
@@ -428,6 +411,217 @@ margin: .25rem;
 border-radius: 10px;
 }
 
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 350px;
+  overflow-y: auto;
+  gap: .30rem .70rem;
+  }
+  
+  .gallery img {
+  margin: .25rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  object-fit: cover;
+  }
+    
+  .galthumb {
+      height: 150px;
+      max-width: 205;
+      border-radius: 10px;
+  }
+  .expand {
+      /* Default to hidden */
+          display: none;
+      /* Overlay entire screen */
+          position: fixed;
+          z-index: 999;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+      /* A bit of padding around image */
+          padding: 1em;
+      /* Translucent background */
+          background: var(--overlay);
+      }
+  
+      /* Unhide the lightbox when it's the target */
+      .expand:target {
+          display: block;
+      }
+  
+      .expand img {
+      /* Full width and height */
+          max-width: 100% !important;
+          display: block;
+          margin: auto;
+          margin-top: 50;
+      }
+  
+      .fullview {
+      /* Default to hidden */
+          display: none;
+      /* Overlay entire screen */
+          position: fixed;
+          z-index: 999;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+      /* Translucent background */
+          background: var(--overlay);
+          overflow-y: auto;
+      }
+  
+      /* Unhide the lightbox when it's the target */
+      .fullview:target {
+          display: block;
+      }
+  
+      .fullview img {
+      /* Full width and height */
+          display: block;
+          margin: auto;
+          padding: 10px;
+          max-width: 100%;
+          position: relative;
+          top: 20px;
+          left: 0;
+          right: 0;
+          bottom: 0;
+      }
+  
+      .meta { 
+          text-align: center;
+          margin: auto;
+          margin-top: 5px;
+          width: 100%;  
+          background-color: #511579;
+          border-radius: 15px; 
+      }
+  
+      .desc {  
+          padding: 10px;
+          color: white;
+      }
+  
+      .desc a {
+          color: var(--container);
+      }
+  
+      .desc a:active {
+          color: rgb(119, 216, 255);
+      }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 350px;
+  overflow-y: auto;
+  gap: .30rem .70rem;
+  }
+  
+  .gallery img {
+  margin: .25rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  object-fit: cover;
+  }
+    
+  .galthumb {
+      height: 150px;
+      max-width: 205;
+      border-radius: 10px;
+  }
+  .expand {
+      /* Default to hidden */
+          display: none;
+      /* Overlay entire screen */
+          position: fixed;
+          z-index: 999;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+      /* A bit of padding around image */
+          padding: 1em;
+      /* Translucent background */
+          background: var(--overlay);
+      }
+  
+      /* Unhide the lightbox when it's the target */
+      .expand:target {
+          display: block;
+      }
+  
+      .expand img {
+      /* Full width and height */
+          max-width: 100% !important;
+          display: block;
+          margin: auto;
+          margin-top: 50;
+      }
+  
+      .fullview {
+      /* Default to hidden */
+          display: none;
+      /* Overlay entire screen */
+          position: fixed;
+          z-index: 999;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+      /* Translucent background */
+          background: var(--overlay);
+          overflow-y: auto;
+      }
+  
+      /* Unhide the lightbox when it's the target */
+      .fullview:target {
+          display: block;
+      }
+  
+      .fullview img {
+      /* Full width and height */
+          display: block;
+          margin: auto;
+          padding: 10px;
+          max-width: 100%;
+          position: relative;
+          top: 20px;
+          left: 0;
+          right: 0;
+          bottom: 0;
+      }
+  
+      .meta { 
+          text-align: center;
+          margin: auto;
+          margin-top: 5px;
+          width: 100%;  
+          background-color: #511579;
+          border-radius: 15px; 
+      }
+  
+      .desc {  
+          padding: 10px;
+          color: white;
+      }
+  
+      .desc a {
+          color: var(--container);
+      }
+  
+      .desc a:active {
+          color: rgb(119, 216, 255);
+      }
+
 /*catgirl shrine*/
 #catgirls {
 text-align: left;
@@ -482,52 +676,7 @@ footer{
 
 #trdecor{
   display: none;
-}
-
-/*ita blog*/
-#blog {
-margin: auto;
-width: 100%;
-}
-.post-header {
-background-color: #DDC7FF;
-padding: 10px 20px 5px 20px;
-border-radius: 20px 20px 0px 0px;
-border: solid rgb(143, 104, 235);
-border-width: 0px 0px 2px 0px;
-}
-.post-title {
-font-size: 1.25em;
-font-weight: bold;
-text-align: left;
-}
-.post-date {
-text-align: left;
-}
-.postbody {
-padding: 20px;
-background-color: #F9EAF6;
-padding: 5px 20px 5px 20px;
-border-radius: 0px 0px 20px 20px;
-margin: 0px 0px 25px 0px;
-}
-
-.postbody p{
-text-align: left;
-}
-
-.postimg img{
-border-radius: 20px;
-text-align: center;
-padding: 0px 10px 0px 10px;
-max-width: 100%;
-max-height: 200px;
-}
-
-.postbody ul {
-text-align: left;
-}
-}
+}}
 
 /*pc version*/
 @media (min-width: 900px) {
@@ -635,21 +784,6 @@ main {
   width: 50%;
 }
 
-#tldecor{
-  position:absolute;
-  top: -35px;
-  left: -40px;
-  width: 135px;
-  transform: scaleX(-1);
-}
-
-#trdecor{
-  position:absolute;
-  top: -35px;
-  right: -40px;
-  width: 135px;
-}
-
 #container{
   display: flex;
   flex-wrap: wrap;
@@ -667,14 +801,16 @@ main {
 }
 
 #content {
-  height: 575px;
+  height: 650px;
+  height: 650px;
   padding: 20px; 
   flex: 1;
   overflow: auto;
 }
 
 #contentr {
-  max-height: 575px;
+  max-height: 650px;
+  max-height: 650px;
   padding: 20px; 
   flex: 1;
   overflow: auto;
@@ -682,10 +818,8 @@ main {
 
 
 #pagecontent {
-  height: 600px;
-  padding-top: 20px;
-  padding-left:35px; 
-  padding-right:35px; 
+  height: 650px;
+  padding: 20px 50px 0px 50px; 
   flex: 1;
   overflow: auto;
 }
@@ -745,6 +879,239 @@ border-radius: 10px;
 outline: 2px solid var(--bcolor);
 }
 
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .30rem .70rem;
+  }
+  
+  .gallery a:hover img {
+  outline: 2px solid var(--bcolor);
+  }
+  
+.galthumb {
+    height: 205px;
+    max-width: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+    background-color: #fff;
+}
+
+.expand {
+    /* Default to hidden */
+        display: none;
+    /* Overlay entire screen */
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    /* A bit of padding around image */
+        padding: 1em;
+    /* Translucent background */
+        background: var(--overlay);
+    }
+
+    /* Unhide the lightbox when it's the target */
+    .expand:target {
+        display: block;
+    }
+
+    .expand img {
+    /* Full width and height */
+        max-height: 600px !important;
+        max-width: 600px !important;
+        display: block;
+        margin: auto;
+        margin-top: 50;
+        border: 10px solid #fff;
+        background-color: #fff;
+    }
+
+    .expand a:hover img {
+      outline: 0px solid;
+    }
+
+    .fullview {
+    /* Default to hidden */
+        display: none;
+    /* Overlay entire screen */
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    /* Translucent background */
+        background: var(--overlay);
+        overflow-y: auto;
+    }
+
+    /* Unhide the lightbox when it's the target */
+    .fullview:target {
+        display: block;
+    }
+
+    .fullview img {
+    /* Full width and height */
+        display: block;
+        margin: auto;
+        padding: 10px;
+        border: 1px solid #ddd;
+        background: #fff;
+        max-width: 100%;
+        position: relative;
+        top: 20px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .fullview a:hover img {
+      outline: 0px solid;
+    }
+
+    .meta { 
+        text-align: center;
+        margin: auto;
+        margin-top: 5px;
+        width: 700px;  
+        background-color: #511579;
+        border-radius: 15px; 
+    }
+
+    .desc {  
+        padding: 10px;
+        color: white;
+    }
+
+    .desc a {
+        color: var(--container);
+    }
+
+    .desc a:active {
+        color: rgb(119, 216, 255);
+    }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .30rem .70rem;
+  }
+  
+  .gallery a:hover img {
+  outline: 2px solid var(--bcolor);
+  }
+  
+.galthumb {
+    height: 205px;
+    max-width: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+    background-color: #fff;
+}
+
+.expand {
+    /* Default to hidden */
+        display: none;
+    /* Overlay entire screen */
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    /* A bit of padding around image */
+        padding: 1em;
+    /* Translucent background */
+        background: var(--overlay);
+    }
+
+    /* Unhide the lightbox when it's the target */
+    .expand:target {
+        display: block;
+    }
+
+    .expand img {
+    /* Full width and height */
+        max-height: 600px !important;
+        max-width: 600px !important;
+        display: block;
+        margin: auto;
+        margin-top: 50;
+        border: 10px solid #fff;
+        background-color: #fff;
+    }
+
+    .expand a:hover img {
+      outline: 0px solid;
+    }
+
+    .fullview {
+    /* Default to hidden */
+        display: none;
+    /* Overlay entire screen */
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    /* Translucent background */
+        background: var(--overlay);
+        overflow-y: auto;
+    }
+
+    /* Unhide the lightbox when it's the target */
+    .fullview:target {
+        display: block;
+    }
+
+    .fullview img {
+    /* Full width and height */
+        display: block;
+        margin: auto;
+        padding: 10px;
+        border: 1px solid #ddd;
+        background: #fff;
+        max-width: 100%;
+        position: relative;
+        top: 20px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .fullview a:hover img {
+      outline: 0px solid;
+    }
+
+    .meta { 
+        text-align: center;
+        margin: auto;
+        margin-top: 5px;
+        width: 700px;  
+        background-color: #511579;
+        border-radius: 15px; 
+    }
+
+    .desc {  
+        padding: 10px;
+        color: white;
+    }
+
+    .desc a {
+        color: var(--container);
+    }
+
+    .desc a:active {
+        color: rgb(119, 216, 255);
+    }
+
 .archive {
   display: flex;
   flex-wrap: wrap;
@@ -752,14 +1119,49 @@ outline: 2px solid var(--bcolor);
   width: 100%;
 }
 
+
+
 #thumblayout {
-display: flex;
-flex-wrap: wrap;
-overflow-y: auto;
-margin: auto;
-justify-content: center;
-width: 100%;
-}
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  margin: auto;
+  justify-content: center;
+  width: 100%;
+  gap: 2px;
+  }
+
+  #thumblayout img {
+    border-radius: 10px;
+  }
+
+  #thumblayout a:hover img {
+    outline: 3px solid rgb(255, 238, 250);
+  }
+
+  #thumblayout a img {
+    outline: 3px solid var(--bcolor);
+    }
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  margin: auto;
+  justify-content: center;
+  width: 100%;
+  gap: 2px;
+  }
+
+  #thumblayout img {
+    border-radius: 10px;
+  }
+
+  #thumblayout a:hover img {
+    outline: 3px solid rgb(255, 238, 250);
+  }
+
+  #thumblayout a img {
+    outline: 3px solid var(--bcolor);
+    }
 
 .subtitle1 {
   height: 28px;
@@ -830,59 +1232,7 @@ height: 350px;
 #chaobig{
 max-height: 350px;
 }
-
-/*ita blog*/
-#blog {
-width: 85%;
-margin: auto;
 }
-.post-header {
-background-color: #DDC7FF;
-padding: 10px 20px 5px 20px;
-border-radius: 20px 20px 0px 0px;
-border: solid rgb(143, 104, 235);
-border-width: 0px 0px 2px 0px;
-}
-.post-title {
-font-size: 1.25em;
-font-weight: bold;
-text-align: left;
-}
-.post-date {
-text-align: left;
-}
-.postbody {
-padding: 20px;
-background-color: #F9EAF6;
-padding: 5px 20px 5px 20px;
-border-radius: 0px 0px 20px 20px;
-margin: 0px 0px 25px 0px;
-}
-
-.postbody p{
-text-align: left;
-}
-
-.postimg img{
-border-radius: 20px;
-text-align: center;
-height: 275px;
-padding: 0px 10px 0px 10px;
-}
-
-.postbody ul {
-text-align: left;
-}
-
-/*footer area*/
-footer{
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin: auto;
-}
-}
-
 /*!
 By André Rinas, www.andrerinas.de
 Documentation, www.simplelightbox.de
@@ -1113,4 +1463,3 @@ body.hidden-scroll {
   100% {
     transform: scale(1.2);
     opacity: 0; } }
-
