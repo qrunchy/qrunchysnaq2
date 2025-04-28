@@ -98,7 +98,7 @@
         </pubDate>
       </item>
 
-              <item>
+        <item>
         <title>RSS fix</title>
         <description>
            This is just an RSS post, trying to fix a link in the feed for qrunchy.space.
@@ -107,6 +107,19 @@
         <guid>https://qrunchy.space/031124</guid>
         <pubDate>
          Fri, 15 Mar 2024 11:25:00 -0500
+        </pubDate>
+      </item>
+
+      <item>
+        <title>Long time no see</title>
+        <description>
+           Wow, it's been a sec! Sorry for disappearing for over a year, haha. I have to take large breaks from my hobbies sometimes, and I had a lot going on in 2024.
+          I have added archive pages for 2024 and 2014. The art page now shows this year's work so far. Created a new link button with the new domain name and removed the outdate ones. I might put them in their own section later? We'll see. I added icons for my social links to the links page. I changed the home page design a bit, removed the recent art section since it was a pain to update. I took down the ita blog for now. I didn't have as much to post as I thought I would, and I want to eventually build an all-purpose blog. I shortened my about page blurb. I made a little carrd type page. Check it out!
+        </description>
+        <link>https://qrunchy.space/changelog.html</link>
+        <guid>https://qrunchy.space/042725</guid>
+        <pubDate>
+         Sun, 27 Apr 2025 19:20:00 -0500
         </pubDate>
       </item>
     </channel>
