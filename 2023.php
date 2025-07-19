@@ -34,7 +34,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2023</title>
     <link rel="icon" type="image/x-icon" href="img/cdfavicon.ico">
-    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="simple-lightbox.js"></script>
+    <link rel="stylesheet" type="text/css" href="style2.css"/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="load.js"></script>
 <script type="text/javascript" src="cursor.js"></script>
@@ -49,7 +51,6 @@
           <div id="pagecontent" tabindex="0">
             <div id="top"></div>
             <p><a href="art.php">Art</a> | <a href="archive.html">Archive</a><br>
-            <div id="archnav"></div>
               <a href="#fin">Finished work</a> | <a href="#rough">Rough work</a>
               <h1><img src="img/2023.png" class="subtitle1" alt="2023"></h1>
 
@@ -139,7 +140,7 @@
                     <div class="meta">
                         <div class="desc">
                             <a href="#<?= "$previmg"; ?>">Previous</a> | <a href="#<?= "$nextimg"; ?>">Next</a><br>
-                            <a href="#fvr<?= $t ?>">Full View</a>
+                            <a href="#fvf<?= $t ?>">Full View</a>
                             <p><i><?php $seg = explode("_", $slug);
                             echo "$seg[0]/$seg[1]/2023";?></i><br>
                             <?php if ( is_string($text) && (preg_match('#^desc: (.*)#m', $text, $match))) {
