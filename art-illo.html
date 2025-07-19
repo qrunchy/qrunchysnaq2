@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art - Illustrations</title>
+    <link rel="icon" type="image/x-icon" href="img/cdfavicon.ico">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="simple-lightbox.js"></script>
+    <link rel="stylesheet" type="text/css" href="style copy.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="load.js"></script>
+<script type="text/javascript" src="cursor.js"></script>
+    
+    </head>
+  <body>
+    <div id="box">
+        <header></header> 
+        <nav></nav> 
+        <main>
+          <div id="container">   
+          <div id="pagecontent" tabindex="0">
+            <div id="top"></div>
+            <p>Art | <a href="archive.html">Archive</a><br>
+              <h2><img src="img/finishedwork.png" class="subtitle" id="fin" alt="Finished Work"></h2>
+              <h3>2023</h3>
+                My current work from this year, newest to oldest.
+                Previous years can be found in the archive section.<br><br>
+                
+            <div id="gallery1">
+              <a v-bind:href="'art/'+image.src" v-for="image in images">
+                <img v-bind:src="'art/'+image.src" :alt="image.alt" :title="image.title" :key="image"/>
+              </a><br>
+            </div>
+            <a href="#top">Back to top</a><br><br>
+            <h3>2022</h3>
+            <div id="gallery2">
+                <a v-bind:href="'art/22/'+image.src" v-for="image in images">
+                  <img v-bind:src="'art/22/'+image.src" :alt="image.alt" :title="image.title" :key="image"/></a>
+              </div>
+            <a href="#top">Back to top</a><br>
+            <h3>2021</h3>
+            <div id="gallery3">
+                <a v-bind:href="'art/21/'+image.src" v-for="image in images">
+                    <img v-bind:src="'art/21/'+image.src" :alt="image.alt" :title="image.title" :key="image"/></a>
+              </div>
+            <a href="#top">Back to top</a><br>
+
+            <h3>2020</h3>
+            <div id="gallery4">
+                <a v-bind:href="'art/20/'+image.src" v-for="image in images">
+                    <img v-bind:src="'art/20/'+image.src" :alt="image.alt" :title="image.title" :key="image"/></a>
+              </div>
+            <a href="#top">Back to top</a><br>
+
+            <h3>2019</h3>
+            <div id="gallery5">
+                <a v-bind:href="'art/19/'+image.src" v-for="image in images">
+                    <img v-bind:src="'art/19/'+image.src" :alt="image.alt" :title="image.title" :key="image"/>
+                  </a>
+              </div>
+            <a href="#top">Back to top</a><br>
+
+            <h3>2018</h3>
+            <div id="gallery6">
+                <a v-bind:href="'art/18/'+image.src" v-for="image in images">
+                    <img v-bind:src="'art/18/'+image.src" :alt="image.alt" :title="image.title" :key="image"/>
+                  </a>
+              </div>
+            <a href="#top">Back to top</a><br>
+          </div>
+            </div>
+            <footer></footer>
+        </main>
+   </div>
+  </body>
+  <script>
+    const { createApp } = Vue
+    createApp({
+      data() {
+        return {
+          images: [ {src:"23_09_09guardian2_sm.png", title:"Text on image: 'Lila is an ethereal digital being formed of pure inspiration. She has developed skills from her dreams and goals until she gained the ability to transform into a more advanced form'"},{src:"23_08_05vapeerling_sm.png"},{src:"23_08_01jett_sm.png"},{src:"23_07_15twinkie_sm.png", title:"Art Fight 2023 attack on Raystarchus. Her OC Twinkie."},{src:"23_07_10quiflex_sm.png", title:"Art Fight 2023 attack on Quiflex"},{src:"23_07_08mosscyrus_sm.png", title:"Art Fight 2023 attack on Cultspawn. His OCs Cyrus and Moss."},{src:"23_07_05peony_sm.png", title:"Art Fight 2023 attack on Satorlrosecat. Their fursona Peony."},{src:"23_07_04ruiqui_sm.png", title:"Art Fight 2023 attack on CopperFirebird. His OC Ruiqui."},{src:"23_07_01miyukuna_sm.png", title:"Art Fight 2023 attack on Sheiya. Her OC Miyukuna."},{src:"23_02_16bridget-lounge_sm.png"},{src:"01_04dncskeef-color_sm.png"},{src:"01_04dncskeef_sm.png"}]
+        }
+      }
+    }).mount('#gallery1')  
+    
+    createApp({
+      data() {
+        return {
+            images: [{src:"22_12_08decomerle_sm.png"},{src:"22_11_27miraidon_sm.png"},{src:"22_10_17catfairy_sm.png"},{src:"22_03_26kiffarcanist.png"},{src:"22_10_14valence-sm.png"},{src:"22_08_05bitsy-sm.png"},{src:"22_07_24lenkabee_sm.png"},{src:"22_07_30lily_sm.png"},{src:"22_07_23juno-sm.png"},{src:"22_07_16boots_sm.png"},{src:"22_07_15mika-sm.png"},{src:"22_07_07Nikki_sm.png"},{src:"22_07_04srdhine_sm.png"},{src:"22_07_02roberto-sm.png"},{src:"22_07_01veiltrois_sm.png"},{src:"22_06_26artfight-skeefport.png"},{src:"22_05_21wolf-lion_sm.png"},{src:"22_05_18mel-sastyle_sm.jpg"},{src:"22_04_05softstel2.png"}]
+        }
+      }
+    }).mount('#gallery2')
+
+    createApp({
+      data() {
+        return {
+          images: [{src:"21_02_21cabbalope2.png"},{src:"21_05_20skeefovershoulder.png"},{src:"21_06_13sussi3.jpg"},{src:"21_07_11skeefathleisure2.png"},{src:"21_07_12bunnycolor2.jpg"},{src:"21_07_21zephyr2.png"},{src:"21_11_02warskeef.png"},{src:"21_11_26skeefjobs-bard_edit_sm2.png"}]
+        }
+      }
+    }).mount('#gallery3')
+
+    createApp({
+      data() {
+        return {
+          images: [{src:"04_27glenda_sm.jpg"},{src:"20_03_10beepaint.jpg"},{src:"20_08_10marz2.png"},{src:"20_12_26rubylines-sm.png"}]
+        }
+      }
+    }).mount('#gallery4')
+
+    createApp({
+      data() {
+        return {
+          images: [{src:"01-14vi.png"},{src:"07-07ruby-sm.jpg"},{src:"12-7trainer-marz.png"},{src:"12_23ruby.jpg"}]
+        }
+      }
+    }).mount('#gallery5')
+
+    createApp({
+      data() {
+        return {
+          images: [{src:"01_20unicorn.png"},{src:"03_25djfjafj2.png"},{src:"04_07merlejump_pnk2.png"},{src:"04_09beejump_blu.png"},{src:"04_21mayjump.png"},{src:"05_10vi.png"},{src:"05_17pootsy.png"},{src:"06_12katze.png"},{src:"07_12deggaride_shade.png"},]
+        }
+      }
+    }).mount('#gallery6')
+
+  </script>
+  <script>
+    (function() {
+    var $gallery = new SimpleLightbox('#gallery1 a', {});
+    var $gallery = new SimpleLightbox('#gallery2 a', {});
+    var $gallery = new SimpleLightbox('#gallery3 a', {});
+    var $gallery = new SimpleLightbox('#gallery4 a', {});
+    var $gallery = new SimpleLightbox('#gallery5 a', {});
+    var $gallery = new SimpleLightbox('#gallery6 a', {});
+    })();
+  </script>
+</html>
